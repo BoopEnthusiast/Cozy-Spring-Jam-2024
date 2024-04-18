@@ -1,3 +1,27 @@
-[gd_scene format=3 uid="uid://bvkq4gbpadk11"]
+[gd_scene load_steps=7 format=3 uid="uid://bvkq4gbpadk11"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ju8m2"]
+[ext_resource type="PackedScene" uid="uid://cumdn73osuk3t" path="res://scenes/walls.tscn" id="2_ovlks"]
+[ext_resource type="PackedScene" uid="uid://dgsjv8g5xuarf" path="res://scenes/dispenser.tscn" id="3_it24s"]
+[ext_resource type="PackedScene" uid="uid://nhpx4yj1ma7g" path="res://scenes/cauldron.tscn" id="4_1x7nn"]
+[ext_resource type="PackedScene" uid="uid://ducrtaqc51jlc" path="res://scenes/compost.tscn" id="5_0xkic"]
+[ext_resource type="PackedScene" uid="uid://b4k1qoljldvsu" path="res://scenes/pause_menu.tscn" id="6_g71jd"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_ju8m2")
+
+[node name="Walls" parent="." instance=ExtResource("2_ovlks")]
+
+[node name="Dispenser" parent="." instance=ExtResource("3_it24s")]
+offset_left = 3562.0
+offset_top = 1690.0
+offset_right = 3570.0
+offset_bottom = 1698.0
+
+[node name="Cauldron" parent="." instance=ExtResource("4_1x7nn")]
+position = Vector2(356, 461)
+
+[node name="Compost" parent="." instance=ExtResource("5_0xkic")]
+position = Vector2(3296, 527)
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_g71jd")]

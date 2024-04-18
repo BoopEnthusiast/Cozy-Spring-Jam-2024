@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://nhpx4yj1ma7g"]
+
+[node name="Cauldron" type="StaticBody2D"]

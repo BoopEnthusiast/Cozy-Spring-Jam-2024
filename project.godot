@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Cozy-Spring-Jam-2024"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://resources/icon.svg"
 
 [autoload]
 
 Singleton="*res://scripts/singleton.gd"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2160
+window/stretch/mode="canvas_items"

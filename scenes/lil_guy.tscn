@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf46qb3d2735i"]
+
+[ext_resource type="Script" path="res://scripts/lil_guy.gd" id="1_j35jn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3xo7"]
+size = Vector2(26, 54)
+
+[sub_resource type="Gradient" id="Gradient_1fl2r"]
+offsets = PackedFloat32Array(0.53012)
+colors = PackedColorArray(0.514358, 0.584527, 0.296751, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yd7jm"]
+gradient = SubResource("Gradient_1fl2r")
+
+[node name="LilGuy" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_j35jn")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_o3xo7")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.101563, 54)
+texture = SubResource("GradientTexture1D_yd7jm")
