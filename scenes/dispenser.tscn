@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/dispenser.gd" id="1_dragk"]
 
-[node name="Dispenser" type="Button"]
+[node name="DispenserLayer" type="CanvasLayer"]
+
+[node name="Dispenser" type="Button" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -17,4 +19,4 @@ grow_vertical = 2
 text = "Dispense"
 script = ExtResource("1_dragk")
 
-[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="Dispenser" to="Dispenser" method="_on_pressed"]

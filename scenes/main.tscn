@@ -13,10 +13,6 @@ script = ExtResource("1_ju8m2")
 [node name="Walls" parent="." instance=ExtResource("2_ovlks")]
 
 [node name="Dispenser" parent="." instance=ExtResource("3_it24s")]
-offset_left = 3562.0
-offset_top = 1690.0
-offset_right = 3570.0
-offset_bottom = 1698.0
 
 [node name="Cauldron" parent="." instance=ExtResource("4_1x7nn")]
 position = Vector2(356, 461)
