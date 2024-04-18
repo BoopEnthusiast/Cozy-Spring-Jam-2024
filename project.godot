@@ -12,4 +12,8 @@ config_version=5
 
 config/name="Cozy-Spring-Jam-2024"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://resources/icon.svg"
+
+[autoload]
+
+Singleton="*res://scripts/singleton.gd"
