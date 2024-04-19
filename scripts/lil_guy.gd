@@ -32,7 +32,6 @@ func _physics_process(delta):
 		if collided_object is LilGuy:
 			collided_object.genes += genes
 			collided_object.reset_gene_display()
-			print(collided_object.genes)
 			Singleton.is_dragging = false
 			queue_free()
 
