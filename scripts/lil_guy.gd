@@ -21,7 +21,7 @@ func _physics_process(delta):
 	
 	if not Singleton.is_dragging:
 		velocity = direction * SPEED
-	elif Singleton.is_dragging or hunger_state > 3:
+	elif (Singleton.is_dragging and mouse_is_on) or hunger_state > 3:
 		velocity = Vector2.ZERO
 		global_position = get_global_mouse_position()
 	
@@ -40,7 +40,8 @@ func _on_mouse_entered():
 	mouse_is_on = true
 
 func _on_mouse_exited():
-	mouse_is_on = false
+	if not Singleton.is_dragging:
+		mouse_is_on = false
 
 func _on_timer_timeout():
 	hunger_state += 1
