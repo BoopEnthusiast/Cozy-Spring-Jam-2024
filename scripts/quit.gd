@@ -5,4 +5,4 @@ extends Button
 
 
 func _on_pressed():
-	pass # Replace with function body.
+	get_tree().quit()
