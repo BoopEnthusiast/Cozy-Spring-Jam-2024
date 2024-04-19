@@ -7,6 +7,8 @@ var direction: Vector2
 var mouse_is_on := false
 var is_dragging := false
 
+var genes: Array[String]
+
 
 func _ready():
 	direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
@@ -14,7 +16,6 @@ func _ready():
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):
-		print(mouse_is_on)
 		if mouse_is_on and not Singleton.is_dragging:
 			is_dragging = true
 			Singleton.is_dragging = true
