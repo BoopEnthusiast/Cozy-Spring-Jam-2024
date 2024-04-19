@@ -18,6 +18,7 @@ func _on_body_entered(body):
 
 
 func _on_button_pressed():
-	var lilGuy: LilGuy = LilGuy.new()
-	lilGuy.genes = combanatiom
-	combanatiom.clear()
+	if not combanatiom.is_empty():
+		var lilGuy: LilGuy = LilGuy.new()
+		lilGuy.genes = combanatiom
+		combanatiom.clear()
