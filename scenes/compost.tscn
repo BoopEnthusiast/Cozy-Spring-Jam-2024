@@ -6,37 +6,32 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_etpus"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fj43"]
-size = Vector2(646, 376)
+size = Vector2(662, 398)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cbyi6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6smqx"]
-size = Vector2(650, 309)
+size = Vector2(162, 208.8)
 
 [node name="Compost" type="Area2D"]
-position = Vector2(2807, 184)
 script = ExtResource("1_fn5uo")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(522, 219)
 scale = Vector2(658, 394)
 texture = SubResource("PlaceholderTexture2D_etpus")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(524, 217)
 shape = SubResource("RectangleShape2D_4fj43")
 
 [node name="FeedingStation" type="Area2D" parent="."]
-position = Vector2(400, 656)
+position = Vector2(0, 292.6)
 script = ExtResource("2_vnd8t")
 
 [node name="Sprite2D" type="Sprite2D" parent="FeedingStation"]
-position = Vector2(106, -27)
-scale = Vector2(652, 304)
+scale = Vector2(162, 208.8)
 texture = SubResource("PlaceholderTexture2D_cbyi6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FeedingStation"]
-position = Vector2(106, -25.5)
 shape = SubResource("RectangleShape2D_6smqx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
