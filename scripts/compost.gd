@@ -1,17 +1,11 @@
 extends Area2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
-
-
-
 func _on_body_entered(body):
-	pass # Replace with function body.
+	#if is dragging 
+	if Singleton.is_dragging and body is LilGuy:
+		body.queue_free()
+		Singleton.is_dragging = false
+		Singleton.food_Left += 1
+		print(Singleton.food_Left)
+	
