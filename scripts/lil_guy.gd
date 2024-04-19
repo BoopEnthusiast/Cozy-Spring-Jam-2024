@@ -65,4 +65,5 @@ func reset_gene_display():
 	var concat_genes: String
 	for gene in genes:
 		concat_genes += gene
+		concat_genes += '\n'
 	label.text = concat_genes
