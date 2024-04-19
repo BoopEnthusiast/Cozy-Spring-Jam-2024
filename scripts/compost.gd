@@ -7,5 +7,4 @@ func _on_body_entered(body):
 		body.queue_free()
 		Singleton.is_dragging = false
 		Singleton.food_Left += 1
-		print(Singleton.food_Left)
 	
