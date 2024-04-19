@@ -1,7 +1,7 @@
 class_name LilGuy extends CharacterBody2D
 
 
-const SPEED = 300.0
+var speed = 300.0
 
 var direction: Vector2
 var mouse_is_on := false
@@ -32,7 +32,7 @@ func _physics_process(delta):
 		direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
 	
 	if not is_dragging:
-		velocity = direction * SPEED
+		velocity = direction * speed
 	elif is_dragging or hunger_state > 3:
 		velocity = Vector2.ZERO
 		global_position = get_global_mouse_position()
