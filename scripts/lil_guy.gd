@@ -6,6 +6,7 @@ const SPEED = 300.0
 var direction: Vector2
 var mouse_is_on := false
 var is_dragging := false
+var hunger_state: int = 0
 
 var genes: Array[String]
 
@@ -30,11 +31,18 @@ func _physics_process(delta):
 	
 	if not is_dragging:
 		velocity = direction * SPEED
-	else:
+	elif is_dragging or hunger_state > 3:
 		velocity = Vector2.ZERO
 		global_position = get_global_mouse_position()
 	
 	move_and_slide()
+	
+	if is_dragging and is_on_wall():
+		var collided_object = get_last_slide_collision().get_collider()
+		if collided_object is LilGuy:
+			collided_object.genes.append(genes)
+			Singleton.is_dragging = false
+			queue_free()
 
 
 func _on_mouse_entered():
@@ -43,3 +51,7 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	mouse_is_on = false
+
+
+func _on_timer_timeout():
+	hunger_state += 1
