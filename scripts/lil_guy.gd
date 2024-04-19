@@ -9,7 +9,8 @@ var is_dragging := false
 var hunger_state: int = 0
 var genes: Array[String]
 
-@onready var label = $Label
+@onready var label: Label = $Label
+@onready var timer: Timer = $Timer
 
 
 func _input(event):
