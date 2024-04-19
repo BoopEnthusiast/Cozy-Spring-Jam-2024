@@ -4,6 +4,7 @@ class_name cauldron
 var combanatiom: Array[String]
 @onready var label: Label = $Label
 
+
 func _on_body_entered(body):
 	if Singleton.is_dragging and body is LilGuy:
 		var lilGuy: LilGuy = body
@@ -14,3 +15,9 @@ func _on_body_entered(body):
 		for gene in combanatiom:
 			genes += gene
 		label.text = genes
+
+
+func _on_button_pressed():
+	var lilGuy: LilGuy = LilGuy.new()
+	lilGuy.genes = combanatiom
+	combanatiom.clear()
