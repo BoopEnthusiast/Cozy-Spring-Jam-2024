@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://belsofbn0riec"]
+[gd_scene load_steps=3 format=3 uid="uid://belsofbn0riec"]
 
 [ext_resource type="Script" path="res://scripts/play.gd" id="1_l8pd7"]
+[ext_resource type="Script" path="res://scripts/quit.gd" id="2_2017o"]
 
 [node name="MainMenuScreen" type="Control"]
 layout_mode = 3
@@ -28,4 +29,33 @@ text = "Play
 "
 script = ExtResource("1_l8pd7")
 
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -368.0
+offset_top = -659.0
+offset_right = 359.0
+offset_bottom = -356.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 150
+text = "Quit"
+script = ExtResource("2_2017o")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 581.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 250
+text = "Cozy Eugenics
+"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
