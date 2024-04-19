@@ -10,7 +10,7 @@ func _on_body_entered(body):
 		var lilGuy: LilGuy = body
 		for gene in lilGuy.genes:
 			combanatiom.append(gene)
-		get_parent().remove_child(body)
+		get_parent().remove_child(lilGuy)
 		var genes: String
 		for gene in combanatiom:
 			genes += gene

@@ -67,3 +67,8 @@ func reset_gene_display():
 		concat_genes += gene
 		concat_genes += '\n'
 	label.text = concat_genes
+
+func _exit_tree():
+	mouse_is_on = false
+	Singleton.is_dragging = false
+	is_dragging = false
