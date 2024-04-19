@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/lil_guy.gd" id="1_j35jn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3xo7"]
-size = Vector2(38, 68)
+size = Vector2(44, 86)
 
 [sub_resource type="Gradient" id="Gradient_1fl2r"]
 offsets = PackedFloat32Array(0.53012)
@@ -21,7 +21,7 @@ script = ExtResource("1_j35jn")
 shape = SubResource("RectangleShape2D_o3xo7")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.101563, 54)
+scale = Vector2(0.171875, 86)
 texture = SubResource("GradientTexture1D_yd7jm")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
