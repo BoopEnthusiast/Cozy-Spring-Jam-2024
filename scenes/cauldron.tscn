@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://nhpx4yj1ma7g"]
+[gd_scene load_steps=5 format=3 uid="uid://nhpx4yj1ma7g"]
 
-[node name="Cauldron" type="StaticBody2D"]
+[ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_klcip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lniym"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e1epr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_irce7"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="Cauldron" type="Area2D"]
+script = ExtResource("1_klcip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_lniym")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(200, 200)
+texture = SubResource("PlaceholderTexture2D_e1epr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+label_settings = SubResource("LabelSettings_irce7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
