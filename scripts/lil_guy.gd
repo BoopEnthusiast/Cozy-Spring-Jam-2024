@@ -36,6 +36,13 @@ func _physics_process(delta):
 		global_position = get_global_mouse_position()
 	
 	move_and_slide()
+	
+	if is_dragging and is_on_wall():
+		var collided_object = get_last_slide_collision().get_collider()
+		if collided_object is LilGuy:
+			collided_object.genes.append(genes)
+			Singleton.is_dragging = false
+			queue_free()
 
 
 func _on_mouse_entered():
