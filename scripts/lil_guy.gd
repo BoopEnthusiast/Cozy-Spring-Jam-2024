@@ -7,12 +7,14 @@ var direction: Vector2
 var mouse_is_on := false
 var is_dragging := false
 var hunger_state: int = 0
-
 var genes: Array[String]
+
+@onready var label = $Label
 
 
 func _ready():
 	direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
+	reset_gene_display()
 
 
 func _input(event):
@@ -40,7 +42,9 @@ func _physics_process(delta):
 	if is_dragging and is_on_wall():
 		var collided_object = get_last_slide_collision().get_collider()
 		if collided_object is LilGuy:
-			collided_object.genes.append(genes)
+			collided_object.genes += genes
+			collided_object.reset_gene_display()
+			print(collided_object.genes)
 			Singleton.is_dragging = false
 			queue_free()
 
@@ -55,3 +59,10 @@ func _on_mouse_exited():
 
 func _on_timer_timeout():
 	hunger_state += 1
+
+
+func reset_gene_display():
+	var concat_genes: String
+	for gene in genes:
+		concat_genes += gene
+	label.text = concat_genes

@@ -28,6 +28,15 @@ texture = SubResource("GradientTexture1D_yd7jm")
 wait_time = 60.0
 autostart = true
 
+[node name="Label" type="Label" parent="."]
+offset_left = -91.0
+offset_top = -38.0
+offset_right = 91.0
+offset_bottom = 39.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

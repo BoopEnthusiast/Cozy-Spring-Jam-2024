@@ -12,12 +12,36 @@ script = ExtResource("1_ju8m2")
 
 [node name="Walls" parent="." instance=ExtResource("2_ovlks")]
 
-[node name="Dispenser" parent="." instance=ExtResource("3_it24s")]
+[node name="DispenserLayer" type="CanvasLayer" parent="."]
+
+[node name="X" parent="DispenserLayer" instance=ExtResource("3_it24s")]
+offset_left = -1217.0
+offset_top = -543.0
+offset_right = -919.0
+offset_bottom = -459.0
+text = "Dispense X"
+gene = "X"
+
+[node name="Y" parent="DispenserLayer" instance=ExtResource("3_it24s")]
+offset_left = -867.0
+offset_top = -543.0
+offset_right = -570.0
+offset_bottom = -459.0
+text = "Dispense Y"
+gene = "Y"
+
+[node name="Z" parent="DispenserLayer" instance=ExtResource("3_it24s")]
+offset_left = -517.0
+offset_top = -543.0
+offset_right = -221.0
+offset_bottom = -459.0
+text = "Dispense Z"
+gene = "Z"
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_g71jd")]
 
 [node name="Cauldron" parent="." instance=ExtResource("4_1x7nn")]
 position = Vector2(356, 461)
 
 [node name="Compost" parent="." instance=ExtResource("5_0xkic")]
 position = Vector2(3296, 527)
-
-[node name="PauseMenu" parent="." instance=ExtResource("6_g71jd")]
