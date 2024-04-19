@@ -39,13 +39,13 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	if is_dragging and is_on_wall():
+	"""if is_dragging and is_on_wall():
 		var collided_object = get_last_slide_collision().get_collider()
 		if collided_object is LilGuy:
 			collided_object.genes += genes
 			collided_object.reset_gene_display()
 			Singleton.is_dragging = false
-			queue_free()
+			queue_free()""" # Not required due to cauldron
 
 
 func _on_mouse_entered():
