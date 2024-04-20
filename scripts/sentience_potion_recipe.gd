@@ -1,12 +1,17 @@
 extends RichTextLabel
 
 var sentiencePotionUnlocked = false
+var sentArray: Array[String] = ["????????????????????????", "ZYXYZXZXYZXYYZXZXYXZXXYZX"]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	if Singleton.score < 500:
+		text = sentArray[0]
+		
 	if Singleton.score >= 500:
 		sentiencePotionUnlocked = true
 		
 	if sentiencePotionUnlocked:
-		self.visible = true
+		text = sentArray[1]
 
