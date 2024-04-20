@@ -18,6 +18,7 @@ var in_cauldron := false
 @onready var timer: Timer = $Timer
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var leafTop: AnimatedSprite2D = $LeafTop
+@onready var midLeaf: AnimatedSprite2D = $MidLeaf
 
 
 func _input(_event):
@@ -102,10 +103,7 @@ func update_sprite():
 			sprite.play("healthy_walk")
 		FoodLevel.HUNGRY:
 			sprite.play("hungry_walk")
-			leafTop.play("hungry")
 		FoodLevel.STARVING:
 			sprite.play("hungry_walk")
-			leafTop.hide()
 		FoodLevel.DEAD:
 			sprite.play("dead")
-			leafTop.hide()
