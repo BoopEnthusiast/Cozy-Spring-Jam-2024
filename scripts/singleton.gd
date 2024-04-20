@@ -4,6 +4,7 @@ extends Node
 const SLOW_MULTIPLIER = 0.8
 const LENGTHEN_LIFE_MULTIPLIER = 1.5
 const HITBOX_SIZE_MULTIPLIER = 1.3
+const NEXT_POINTS_GAINED_MULTIPLIER = 1.5
 const FOOD_WORTH_MULTIPLIER = 2
 
 # Potion recipes
@@ -18,6 +19,7 @@ var main_node: Node2D
 var is_dragging := false
 var food_Left := 0
 var score := 0
+var points_multiplier := 1
 var has_sentience := false
 var has_strength := false
 
@@ -39,7 +41,7 @@ func bigger_hitboxes() -> void:
 
 
 func point_gain_increase() -> void:
-	pass
+	points_multiplier *= NEXT_POINTS_GAINED_MULTIPLIER
 
 
 func kill_all() -> void:

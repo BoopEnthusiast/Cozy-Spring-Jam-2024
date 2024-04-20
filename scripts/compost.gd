@@ -1,10 +1,13 @@
 extends Area2D
 
+@onready var food_left_display = $FoodLeft
+
 
 func _on_body_entered(body):
-	#if is dragging 
-	if Singleton.is_dragging and body is LilGuy:
+	if body.is_dragging and body is LilGuy:
 		body.queue_free()
-		Singleton.is_dragging = false
 		Singleton.food_Left += 1
-	
+
+
+func _process(delta):
+	food_left_display.text = "Food left: " + str(Singleton.food_Left)

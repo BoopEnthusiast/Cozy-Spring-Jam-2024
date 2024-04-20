@@ -23,15 +23,30 @@ texture = SubResource("PlaceholderTexture2D_etpus")
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4fj43")
 
+[node name="FoodLeft" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 163.0
+offset_right = 20.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Food left: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="FeedingStation" type="Area2D" parent="."]
 position = Vector2(0, 292.6)
 script = ExtResource("2_vnd8t")
 
-[node name="Sprite2D" type="Sprite2D" parent="FeedingStation"]
+[node name="Sprite" type="Sprite2D" parent="FeedingStation"]
 scale = Vector2(162, 208.8)
 texture = SubResource("PlaceholderTexture2D_cbyi6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FeedingStation"]
+[node name="Collider" type="CollisionShape2D" parent="FeedingStation"]
 shape = SubResource("RectangleShape2D_6smqx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
