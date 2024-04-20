@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvkq4gbpadk11"]
+[gd_scene load_steps=10 format=3 uid="uid://bvkq4gbpadk11"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_ju8m2"]
 [ext_resource type="PackedScene" uid="uid://cumdn73osuk3t" path="res://scenes/walls.tscn" id="2_ovlks"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b4k1qoljldvsu" path="res://scenes/pause_menu.tscn" id="6_g71jd"]
 [ext_resource type="Script" path="res://scripts/score_text.gd" id="7_3vixa"]
 [ext_resource type="PackedScene" uid="uid://crmdcshv7rb21" path="res://scenes/recipes_screen.tscn" id="8_hntjs"]
+[ext_resource type="PackedScene" uid="uid://cwhb1ub5dsr8j" path="res://scenes/ending_screen.tscn" id="9_oil3o"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ju8m2")
@@ -71,3 +72,6 @@ text = "Score: "
 script = ExtResource("7_3vixa")
 
 [node name="RecipesScreen" parent="." instance=ExtResource("8_hntjs")]
+
+[node name="EndingScreen" parent="." instance=ExtResource("9_oil3o")]
+visible = false

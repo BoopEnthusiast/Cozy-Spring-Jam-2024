@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cwhb1ub5dsr8j"]
+
+[node name="EndingScreen" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 4.0
+offset_right = 3843.0
+offset_bottom = 2160.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
