@@ -39,7 +39,6 @@ func update_label():
 		slots_left -= 1
 	slots_left_label.text = str(slots_left)
 	
-	print(current_label.text,"   ",current_recipe)
 	if current_label.text == current_recipe:
 		Singleton.score += current_recipe_length * Singleton.points_multiplier
 		Singleton.points_multiplier = 1

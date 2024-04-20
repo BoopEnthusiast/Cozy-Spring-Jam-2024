@@ -43,7 +43,7 @@ func lengthen_lives() -> void:
 
 func bigger_hitboxes() -> void:
 	for lil_guy: LilGuy in get_tree().get_nodes_in_group("lil_guy"):
-		lil_guy.collider.shape.size *= HITBOX_SIZE_MULTIPLIER
+		lil_guy.scale *= HITBOX_SIZE_MULTIPLIER
 
 
 func point_gain_increase() -> void:
