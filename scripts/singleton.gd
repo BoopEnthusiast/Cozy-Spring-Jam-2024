@@ -25,7 +25,7 @@ var main_node: Node2D
 var is_dragging := false
 var food_Left := 0
 var score := 0
-var points_multiplier := 1
+var points_multiplier: float = 1.0
 var has_sentience := false
 var has_strength := false
 
