@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://crmdcshv7rb21"]
+[gd_scene load_steps=17 format=3 uid="uid://crmdcshv7rb21"]
 
 [ext_resource type="Script" path="res://scripts/recipes_screen.gd" id="1_7hkwy"]
 [ext_resource type="Script" path="res://scripts/book_button.gd" id="2_fpp56"]
+[ext_resource type="Texture2D" uid="uid://dtq3r2y3wova7" path="res://resources/recipe_book.png" id="2_l51jg"]
 [ext_resource type="Script" path="res://scripts/longevity_potion_recipe.gd" id="2_rh8d8"]
 [ext_resource type="Script" path="res://scripts/hitbox_potion_recipe.gd" id="3_tpu4c"]
 [ext_resource type="Script" path="res://scripts/point_potion_recipe.gd" id="4_qhqr5"]
@@ -9,7 +10,9 @@
 [ext_resource type="Script" path="res://scripts/food_potion_recipe.gd" id="6_bv6fg"]
 [ext_resource type="Script" path="res://scripts/sentience_potion_recipe.gd" id="7_modhv"]
 [ext_resource type="Script" path="res://scripts/strength_potion_unlocked.gd" id="8_j3dm0"]
-[ext_resource type="Texture2D" uid="uid://jsi3fxcju3mc" path="res://resources/recipie-book.png" id="9_vje5j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1q31"]
+texture = ExtResource("2_l51jg")
 
 [sub_resource type="GDScript" id="GDScript_hdcuv"]
 script/source = "extends RichTextLabel
@@ -57,7 +60,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 274), Vector2(-1788, 274)]
+"values": [Vector2(-1500, -429), Vector2(-3000, -429)]
 }
 
 [sub_resource type="Animation" id="Animation_k2qna"]
@@ -72,7 +75,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-1788, 274), Vector2(0, 274)]
+"values": [Vector2(-3000, -429), Vector2(-1500, -429)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uboac"]
@@ -91,18 +94,24 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = -1788.0
 offset_top = -806.0
-offset_right = -50.0
-offset_bottom = 894.0
+offset_right = 2505.0
+offset_bottom = 2165.0
 grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g1q31")
 
 [node name="RecipesTitle" type="RichTextLabel" parent="RecipeBackground"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -1499.0
+offset_left = 1319.0
+offset_top = 535.0
+offset_right = -1374.0
+offset_bottom = -1537.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 100
 text = "                         Recipes
 "
@@ -113,11 +122,14 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -675.0
-offset_bottom = 843.0
+offset_left = 1623.0
+offset_top = -810.5
+offset_right = -1422.0
+offset_bottom = 927.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 48
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "Slow Potion -                       - Makes your LilGuys slower. Unlocks at 15 points
 
 Longevity Potion -                       - Lets LilGuys live longer. Unlocks at 30 points
@@ -141,91 +153,99 @@ offset_left = 305.0
 offset_top = 1.0
 offset_right = 610.0
 offset_bottom = 74.0
-theme_override_font_sizes/normal_font_size = 48
+theme_override_colors/default_color = Color(1, 0.240874, 0.459452, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "XYZZYZXXZ"
 script = SubResource("GDScript_hdcuv")
 
 [node name="LongevityPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
 layout_mode = 0
-offset_left = 424.0
-offset_top = 138.0
-offset_right = 728.0
-offset_bottom = 214.0
-theme_override_font_sizes/normal_font_size = 48
+offset_left = 412.0
+offset_top = 203.0
+offset_right = 716.0
+offset_bottom = 279.0
+theme_override_colors/default_color = Color(0.566324, 0.526654, 0.875147, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "ZZZYYZYXXX"
 script = ExtResource("2_rh8d8")
 
 [node name="HitboxPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
 layout_mode = 0
-offset_left = 543.0
-offset_top = 347.0
-offset_right = 729.0
-offset_bottom = 416.0
-theme_override_font_sizes/normal_font_size = 48
+offset_left = 513.0
+offset_top = 398.0
+offset_right = 699.0
+offset_bottom = 467.0
+theme_override_colors/default_color = Color(0.4, 0.737255, 0.882353, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "XYXYX"
 script = ExtResource("3_tpu4c")
 
 [node name="PointPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
 layout_mode = 0
-offset_left = 681.0
-offset_top = 543.0
-offset_right = 1049.0
-offset_bottom = 613.0
-theme_override_font_sizes/normal_font_size = 48
+offset_left = 623.0
+offset_top = 601.0
+offset_right = 991.0
+offset_bottom = 671.0
+theme_override_colors/default_color = Color(0.79651, 0.688581, 0.101176, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "XYZZYXZYXXZY "
 script = ExtResource("4_qhqr5")
 
 [node name="KillAllPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
 layout_mode = 0
-offset_left = 373.0
-offset_top = 748.0
-offset_right = 734.0
-offset_bottom = 816.0
-theme_override_font_sizes/normal_font_size = 48
+offset_left = 336.0
+offset_top = 804.0
+offset_right = 697.0
+offset_bottom = 872.0
+theme_override_colors/default_color = Color(0.165386, 0.490779, 0.459369, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "YYYYXXXXZZZZ"
 script = ExtResource("5_l5x6m")
 
 [node name="FoodPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
 layout_mode = 0
-offset_left = 643.0
-offset_top = 955.0
-offset_right = 894.0
-offset_bottom = 1031.0
-theme_override_font_sizes/normal_font_size = 48
+offset_left = 594.0
+offset_top = 1018.0
+offset_right = 845.0
+offset_bottom = 1094.0
+theme_override_colors/default_color = Color(0.423529, 0.690196, 0.0352941, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "ZYXYXZYX "
 script = ExtResource("6_bv6fg")
 
 [node name="SentiencePotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
 layout_mode = 0
-offset_left = 511.0
-offset_top = 1147.0
-offset_right = 1268.0
-offset_bottom = 1217.0
-theme_override_font_sizes/normal_font_size = 48
+offset_left = 446.0
+offset_top = 1206.0
+offset_right = 1203.0
+offset_bottom = 1276.0
+theme_override_colors/default_color = Color(0.831373, 0.345098, 0.360784, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "ZYXYZXZXYZXYYZXZXYXZXXYZX "
 script = ExtResource("7_modhv")
 
 [node name="StrengthPotionUnlocked" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
 layout_mode = 0
-offset_left = 479.0
-offset_top = 1359.0
-offset_right = 1343.0
-offset_bottom = 1434.0
-theme_override_font_sizes/normal_font_size = 48
+offset_left = 424.0
+offset_top = 1476.0
+offset_right = 1288.0
+offset_bottom = 1551.0
+theme_override_colors/default_color = Color(0.0886311, 0.321989, 0.63501, 1)
+theme_override_font_sizes/normal_font_size = 46
 text = "XZYXZXYZYXZXZXZYXYYZXYYZXXZYY"
 script = ExtResource("8_j3dm0")
 
 [node name="BookButton" type="Button" parent="RecipeBackground"]
+show_behind_parent = true
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 1736.0
-offset_top = -145.0
-offset_right = 2005.0
-offset_bottom = 56.0
+offset_left = 2952.0
+offset_top = -47.5
+offset_right = 3245.0
+offset_bottom = 163.5
 grow_vertical = 2
-icon = ExtResource("9_vje5j")
 script = ExtResource("2_fpp56")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
