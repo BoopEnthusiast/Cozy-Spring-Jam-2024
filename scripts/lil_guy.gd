@@ -3,13 +3,13 @@ class_name LilGuy extends CharacterBody2D
 signal hunger_changed
 signal merged
 
-enum FoodLevel {HEALTHY, HUNGRY, SARVING, DEAD}
+enum FoodLevel {HEALTHY, HUNGRY, STARVING, DEAD}
 
 var speed = 300.0
 var direction: Vector2
 var mouse_is_on := false
 var is_dragging := false
-var current_hunger_state: int = FoodLevel.HEALTHY
+var current_hunger_state: FoodLevel = FoodLevel.HEALTHY
 var genes: Array[String]
 var food_worth: int = 1
 var in_cauldron := false
@@ -17,6 +17,8 @@ var in_cauldron := false
 @onready var label: Label = $Label
 @onready var timer: Timer = $Timer
 @onready var collider: CollisionShape2D = $Collider
+@onready var sprite: AnimatedSprite2D = $Sprite
+
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):
@@ -57,6 +59,16 @@ func _physics_process(delta):
 	else:
 		velocity = direction * speed
 	
+	# Die when running out of hunger
+	if timer.time_left <= 20 and timer.time_left > 10:
+		current_hunger_state = FoodLevel.HUNGRY
+	if timer.time_left <= 10 and timer.time_left > 0:
+		current_hunger_state = FoodLevel.STARVING
+	if timer.time_left <= 0:
+		current_hunger_state = FoodLevel.DEAD
+	
+	update_sprite()
+	
 	move_and_slide()
 
 
@@ -95,3 +107,13 @@ func get_genes_as_string() -> String:
 	for gene in genes:
 		concat_genes += gene
 	return concat_genes
+
+func update_sprite():
+	if current_hunger_state == FoodLevel.HEALTHY:
+		sprite.play("healthy_walk_left")
+	if current_hunger_state == FoodLevel.HUNGRY:
+		sprite.play("hungry_walk_left")
+	if current_hunger_state == FoodLevel.STARVING:
+		sprite.play("hungry_walk_left")
+	if current_hunger_state == FoodLevel.DEAD:
+		sprite.play("dead")

@@ -1,15 +1,39 @@
-[gd_scene load_steps=17 format=3 uid="uid://cf46qb3d2735i"]
+[gd_scene load_steps=41 format=3 uid="uid://cf46qb3d2735i"]
 
 [ext_resource type="Script" path="res://scripts/lil_guy.gd" id="1_j35jn"]
-[ext_resource type="Texture2D" uid="uid://c5xjhp4uxgt48" path="res://resources/LilGuy/dead.png" id="2_c1la0"]
+[ext_resource type="Texture2D" uid="uid://c5xjhp4uxgt48" path="res://resources/LilGuy/Starving/dead.png" id="2_5jx45"]
 [ext_resource type="Texture2D" uid="uid://dckvds4iwod4h" path="res://resources/LilGuy/Healthy/body.png" id="3_vxd5f"]
 [ext_resource type="Texture2D" uid="uid://crcrl62mg1kjj" path="res://resources/LilGuy/Hungry/body.png" id="4_4jjmk"]
-[ext_resource type="Texture2D" uid="uid://d4jqxijidt3m0" path="res://resources/LilGuy/starving.png" id="5_1ws0y"]
+[ext_resource type="Texture2D" uid="uid://3pbwl4j4o23c" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_0.png" id="5_xb2ba"]
 [ext_resource type="Script" path="res://scripts/lil_guy_sprite_display.gd" id="6_aqigi"]
+[ext_resource type="Texture2D" uid="uid://cgirb5ccqqrc4" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_1.png" id="6_tvbl6"]
+[ext_resource type="Texture2D" uid="uid://de4lqagqcfnet" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_2.png" id="7_dw5h1"]
 [ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="7_ukary"]
 [ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="8_ef81y"]
+[ext_resource type="Texture2D" uid="uid://ce3jrjup6epd8" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_3.png" id="8_s4yab"]
 [ext_resource type="Texture2D" uid="uid://bgxou3q6kq7p2" path="res://resources/LilGuy/Healthy/leaf_top.png" id="9_5a6cn"]
+[ext_resource type="Texture2D" uid="uid://d2fv0u503r3jt" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_4.png" id="9_n1g0n"]
+[ext_resource type="Texture2D" uid="uid://d1sl5ldluylnb" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_5.png" id="10_c8y63"]
 [ext_resource type="Texture2D" uid="uid://dx0ttmvt0ihwp" path="res://resources/LilGuy/Hungry/leaf_top.png" id="10_ghp46"]
+[ext_resource type="Texture2D" uid="uid://cm3k0leg0oafa" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_6.png" id="11_xisah"]
+[ext_resource type="Texture2D" uid="uid://bgdcxkpky4v5j" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_7.png" id="12_kpt8y"]
+[ext_resource type="Texture2D" uid="uid://caf70k475l8mh" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_0.png" id="13_lcvk3"]
+[ext_resource type="Texture2D" uid="uid://ccmjgkh2xq518" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_1.png" id="14_15v63"]
+[ext_resource type="Texture2D" uid="uid://buf6rnpmtn2cv" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_2.png" id="15_ooupo"]
+[ext_resource type="Texture2D" uid="uid://dwkgi8mnmb2af" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_3.png" id="16_lfy5y"]
+[ext_resource type="Texture2D" uid="uid://bwlrd5o6c0xjl" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_4.png" id="17_numbc"]
+[ext_resource type="Texture2D" uid="uid://cyws4u71hjqhc" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_5.png" id="18_7vg30"]
+[ext_resource type="Texture2D" uid="uid://c1e3tdcfe5d5m" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_6.png" id="19_pmtpy"]
+[ext_resource type="Texture2D" uid="uid://c2r1fqf18wjd0" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_7.png" id="20_uhtnp"]
+[ext_resource type="Texture2D" uid="uid://d4jqxijidt3m0" path="res://resources/LilGuy/Starving/starving.png" id="21_hsy7g"]
+[ext_resource type="Texture2D" uid="uid://ijdxjmf4ccd" path="res://resources/LilGuy/Starving/walk_left/starving_walk_0.png" id="22_agi3p"]
+[ext_resource type="Texture2D" uid="uid://vmvl12muq3fp" path="res://resources/LilGuy/Starving/walk_left/starving_walk_1.png" id="23_sk25b"]
+[ext_resource type="Texture2D" uid="uid://q81bswtoicnq" path="res://resources/LilGuy/Starving/walk_left/starving_walk_2.png" id="24_lxnqv"]
+[ext_resource type="Texture2D" uid="uid://dial632v26c14" path="res://resources/LilGuy/Starving/walk_left/starving_walk_3.png" id="25_36iex"]
+[ext_resource type="Texture2D" uid="uid://dgg3od4miuo2e" path="res://resources/LilGuy/Starving/walk_left/starving_walk_4.png" id="26_cfmyt"]
+[ext_resource type="Texture2D" uid="uid://c4hxflrj2u76n" path="res://resources/LilGuy/Starving/walk_left/starving_walk_5.png" id="27_jkxmx"]
+[ext_resource type="Texture2D" uid="uid://c3u7trnp2xwsp" path="res://resources/LilGuy/Starving/walk_left/starving_walk_6.png" id="28_oig6s"]
+[ext_resource type="Texture2D" uid="uid://rvr07uermpe8" path="res://resources/LilGuy/Starving/walk_left/starving_walk_7.png" id="29_8lyns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3xo7"]
 size = Vector2(44, 86)
@@ -25,7 +49,7 @@ gradient = SubResource("Gradient_1fl2r")
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_c1la0")
+"texture": ExtResource("2_5jx45")
 }],
 "loop": true,
 "name": &"dead",
@@ -41,6 +65,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("5_xb2ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tvbl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dw5h1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s4yab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n1g0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c8y63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xisah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kpt8y")
+}],
+"loop": true,
+"name": &"healthy_walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_4jjmk")
 }],
 "loop": true,
@@ -49,10 +102,68 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_1ws0y")
+"texture": ExtResource("13_lcvk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_15v63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ooupo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lfy5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_numbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7vg30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pmtpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_uhtnp")
+}],
+"loop": true,
+"name": &"hungry_walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_hsy7g")
 }],
 "loop": true,
 "name": &"starving",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_agi3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_sk25b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lxnqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_36iex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cfmyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jkxmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_oig6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_8lyns")
+}],
+"loop": true,
+"name": &"starving_walk_left",
 "speed": 5.0
 }]
 
@@ -109,6 +220,7 @@ texture = SubResource("GradientTexture1D_yd7jm")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
+one_shot = true
 autostart = true
 
 [node name="Label" type="Label" parent="."]
@@ -123,6 +235,7 @@ autowrap_mode = 1
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_h2c4p")
+animation = &"starving_walk_left"
 script = ExtResource("6_aqigi")
 
 [node name="MidLeaf" type="AnimatedSprite2D" parent="."]

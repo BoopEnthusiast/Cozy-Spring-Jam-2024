@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4hxflrj2u76n"
-path="res://.godot/imported/starving_walk_5.png-5b598a4061c9aa3a0a8b31c0fcb13ae3.ctex"
+path="res://.godot/imported/starving_walk_5.png-b79d68e6d57a2cc9ab2623c7af42092d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/LilGuy/starving_walk/starving_walk_5.png"
-dest_files=["res://.godot/imported/starving_walk_5.png-5b598a4061c9aa3a0a8b31c0fcb13ae3.ctex"]
+source_file="res://resources/LilGuy/Starving/walk_left/starving_walk_5.png"
+dest_files=["res://.godot/imported/starving_walk_5.png-b79d68e6d57a2cc9ab2623c7af42092d.ctex"]
 
 [params]
 
