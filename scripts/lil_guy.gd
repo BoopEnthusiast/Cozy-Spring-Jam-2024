@@ -121,7 +121,7 @@ func update_sprite():
 	match current_hunger_state:
 		FoodLevel.HEALTHY:
 			sprite.play("healthy_walk")
-		FoodLevel.HUNGRY: 
+		FoodLevel.HUNGRY:
 			sprite.play("hungry_walk")
 			midLeaf.play("hungry")
 			leafTop.play("hungry")
