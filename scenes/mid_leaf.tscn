@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bloobwnynp8e2"]
+[gd_scene load_steps=5 format=3 uid="uid://bloobwnynp8e2"]
 
 [ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="1_nywpy"]
 [ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="2_06yi7"]
+[ext_resource type="Script" path="res://scripts/mid_leaf.gd" id="3_nvy0o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_upwpf"]
 animations = [{
@@ -25,6 +26,7 @@ animations = [{
 [node name="MidLeaf" type="AnimatedSprite2D"]
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_upwpf")
+script = ExtResource("3_nvy0o")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
