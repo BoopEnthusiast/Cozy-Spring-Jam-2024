@@ -17,7 +17,7 @@ var slowPotionUnlocked = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Singleton.score >= 2:
+	if Singleton.score >= 15:
 		slowPotionUnlocked = true
 		
 	if slowPotionUnlocked:
@@ -113,21 +113,21 @@ offset_bottom = 843.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 48
-text = "Slow Potion -                       - Makes your LilGuys slower. Unlocks at 2 points
+text = "Slow Potion -                       - Makes your LilGuys slower. Unlocks at 15 points
 
-Longevity Potion -                       - Lets LilGuys live longer. Unlocks at 5 points
+Longevity Potion -                       - Lets LilGuys live longer. Unlocks at 30 points
 
-Bigger Hitbox Potion -              - Gives LilGuys a bigger hitbox. Unlocks at 6 points
+Bigger Hitbox Potion -              - Gives LilGuys a bigger hitbox. Unlocks at 50 points
 
-Point Modification Potion -                              - Potions give more points. Unlocks at 9 points
+Point Modification Potion -                              - Potions give more points. Unlocks at 90 points
 
-KillAll Potion -                               - Kills all LilGuys on screen. Unlocks at 13 points
+KillAll Potion -                               - Kills all LilGuys on screen. Unlocks at 150 points
 
-Food Generation Potion -                     - Composted LilGuys generate more food. Unlocks at 16 points
+Food Generation Potion -                     - Composted LilGuys generate more food. Unlocks at 200 points
 
-Sentience Potion -                                                              - Give your LilGuys the gift of consciousness. Unlocks at 20 points
+Sentience Potion -                                                              - Give your LilGuys the gift of consciousness. Unlocks at 500 points
 
-Strength Potion -                                                                       - Make your LilGuys strong. Unlocks at 25 points
+Strength Potion -                                                                       - Make your LilGuys strong. Unlocks at 1000 points
 "
 
 [node name="SlowPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
