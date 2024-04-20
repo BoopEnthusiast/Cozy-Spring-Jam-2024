@@ -1,12 +1,15 @@
 class_name LilGuy extends CharacterBody2D
 
+signal hunger_changed
+signal merged
+
+enum FoodLevel {HEALTHY, HUNGRY, SARVING, DEAD}
 
 var speed = 300.0
-
 var direction: Vector2
 var mouse_is_on := false
 var is_dragging := false
-var hunger_state: int = 0
+var current_hunger_state: int = FoodLevel.HEALTHY
 var genes: Array[String]
 var food_worth: int = 1
 
@@ -30,17 +33,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	if is_on_wall():
-		direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
-	
-	if not is_dragging:
-		velocity = direction * speed
-	elif is_dragging or hunger_state > 3:
-		velocity = Vector2.ZERO
-		global_position = get_global_mouse_position()
-	
-	move_and_slide()
-	
+	# 
 	if is_dragging and is_on_wall():
 		var collided_object = get_last_slide_collision().get_collider()
 		if collided_object is LilGuy:
@@ -48,6 +41,20 @@ func _physics_process(delta):
 			collided_object.reset_gene_display()
 			Singleton.is_dragging = false
 			queue_free()
+	
+	# Bounce off walls
+	if is_on_wall():
+		direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
+	
+	# Move if not dead
+	if not is_dragging:
+		velocity = direction * speed
+	elif is_dragging:
+		global_position = get_global_mouse_position()
+	elif current_hunger_state == FoodLevel.DEAD:
+		velocity = Vector2.ZERO
+	
+	move_and_slide()
 
 
 func _on_mouse_entered():
@@ -60,7 +67,9 @@ func _on_mouse_exited():
 
 
 func _on_timer_timeout():
-	hunger_state += 1
+	if current_hunger_state != FoodLevel.DEAD:
+		current_hunger_state += 1
+		hunger_changed.emit()
 
 
 func reset_gene_display():

@@ -1,6 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf46qb3d2735i"]
+[gd_scene load_steps=17 format=3 uid="uid://cf46qb3d2735i"]
 
 [ext_resource type="Script" path="res://scripts/lil_guy.gd" id="1_j35jn"]
+[ext_resource type="Texture2D" uid="uid://c5xjhp4uxgt48" path="res://resources/LilGuy/dead.png" id="2_c1la0"]
+[ext_resource type="Texture2D" uid="uid://dckvds4iwod4h" path="res://resources/LilGuy/Healthy/body.png" id="3_vxd5f"]
+[ext_resource type="Texture2D" uid="uid://crcrl62mg1kjj" path="res://resources/LilGuy/Hungry/body.png" id="4_4jjmk"]
+[ext_resource type="Texture2D" uid="uid://d4jqxijidt3m0" path="res://resources/LilGuy/starving.png" id="5_1ws0y"]
+[ext_resource type="Script" path="res://scripts/lil_guy_sprite_display.gd" id="6_aqigi"]
+[ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="7_ukary"]
+[ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="8_ef81y"]
+[ext_resource type="Texture2D" uid="uid://bgxou3q6kq7p2" path="res://resources/LilGuy/Healthy/leaf_top.png" id="9_5a6cn"]
+[ext_resource type="Texture2D" uid="uid://dx0ttmvt0ihwp" path="res://resources/LilGuy/Hungry/leaf_top.png" id="10_ghp46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3xo7"]
 size = Vector2(44, 86)
@@ -12,7 +21,80 @@ colors = PackedColorArray(0.514358, 0.584527, 0.296751, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_yd7jm"]
 gradient = SubResource("Gradient_1fl2r")
 
-[node name="LilGuy" type="CharacterBody2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2c4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c1la0")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vxd5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4jjmk")
+}],
+"loop": true,
+"name": &"hungry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1ws0y")
+}],
+"loop": true,
+"name": &"starving",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_upwpf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ukary")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ef81y")
+}],
+"loop": true,
+"name": &"hungry",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vh1sg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_5a6cn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ghp46")
+}],
+"loop": true,
+"name": &"hungry",
+"speed": 5.0
+}]
+
+[node name="LilGuy" type="CharacterBody2D" groups=["lil_guy"]]
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_j35jn")
@@ -20,7 +102,8 @@ script = ExtResource("1_j35jn")
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_o3xo7")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="PlaceholderSprite" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.171875, 86)
 texture = SubResource("GradientTexture1D_yd7jm")
 
@@ -37,6 +120,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
 
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_h2c4p")
+script = ExtResource("6_aqigi")
+
+[node name="MidLeaf" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -52)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_upwpf")
+
+[node name="LeafTop" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -62.75)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_vh1sg")
+
+[connection signal="hunger_changed" from="." to="Sprite" method="_on_lil_guy_hunger_changed"]
+[connection signal="merged" from="." to="Sprite" method="_on_lil_guy_merged"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
