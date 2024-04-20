@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bloobwnynp8e2"]
+
+[ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="1_nywpy"]
+[ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="2_06yi7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_upwpf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nywpy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_06yi7")
+}],
+"loop": true,
+"name": &"hungry",
+"speed": 5.0
+}]
+
+[node name="MidLeaf" type="AnimatedSprite2D"]
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_upwpf")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1049.5
+offset_top = -1180.0
+offset_right = -950.5
+offset_bottom = -945.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.165499, 0.529947, 0.261236, 1)
+theme_override_font_sizes/font_size = 172
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -12,6 +12,7 @@ var is_dragging := false
 var current_hunger_state: int = FoodLevel.HEALTHY
 var genes: Array[String]
 var food_worth: int = 1
+var in_cauldron := false
 
 @onready var label: Label = $Label
 @onready var timer: Timer = $Timer
@@ -81,7 +82,16 @@ func reset_gene_display():
 		concat_genes += '\n'
 	label.text = concat_genes
 
+
 func _exit_tree():
-	mouse_is_on = false
-	Singleton.is_dragging = false
-	is_dragging = false
+	if not in_cauldron:
+		mouse_is_on = false
+		Singleton.is_dragging = false
+		is_dragging = false
+
+
+func get_genes_as_string() -> String:
+	var concat_genes: String = ""
+	for gene in genes:
+		concat_genes += gene
+	return concat_genes
