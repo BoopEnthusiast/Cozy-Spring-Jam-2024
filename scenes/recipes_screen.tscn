@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://crmdcshv7rb21"]
+[gd_scene load_steps=16 format=3 uid="uid://crmdcshv7rb21"]
 
 [ext_resource type="Script" path="res://scripts/recipes_screen.gd" id="1_7hkwy"]
 [ext_resource type="Script" path="res://scripts/book_button.gd" id="2_fpp56"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/food_potion_recipe.gd" id="6_bv6fg"]
 [ext_resource type="Script" path="res://scripts/sentience_potion_recipe.gd" id="7_modhv"]
 [ext_resource type="Script" path="res://scripts/strength_potion_unlocked.gd" id="8_j3dm0"]
+[ext_resource type="Texture2D" uid="uid://jsi3fxcju3mc" path="res://resources/recipie-book.png" id="9_vje5j"]
 
 [sub_resource type="GDScript" id="GDScript_hdcuv"]
 script/source = "extends RichTextLabel
@@ -219,11 +220,12 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 1688.0
-offset_top = -129.0
+offset_left = 1736.0
+offset_top = -145.0
 offset_right = 2005.0
-offset_bottom = 40.0
+offset_bottom = 56.0
 grow_vertical = 2
+icon = ExtResource("9_vje5j")
 script = ExtResource("2_fpp56")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
