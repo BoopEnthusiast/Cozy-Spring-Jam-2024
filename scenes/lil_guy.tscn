@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cf46qb3d2735i"]
+[gd_scene load_steps=15 format=3 uid="uid://cf46qb3d2735i"]
 
 [ext_resource type="Script" path="res://scripts/lil_guy.gd" id="1_j35jn"]
 [ext_resource type="Texture2D" uid="uid://c5xjhp4uxgt48" path="res://resources/LilGuy/dead.png" id="2_c1la0"]
@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crcrl62mg1kjj" path="res://resources/LilGuy/Hungry/body.png" id="4_4jjmk"]
 [ext_resource type="Texture2D" uid="uid://d4jqxijidt3m0" path="res://resources/LilGuy/starving.png" id="5_1ws0y"]
 [ext_resource type="Script" path="res://scripts/lil_guy_sprite_display.gd" id="6_aqigi"]
-[ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="7_ukary"]
-[ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="8_ef81y"]
+[ext_resource type="PackedScene" uid="uid://bloobwnynp8e2" path="res://scenes/mid_leaf.tscn" id="7_xtumn"]
 [ext_resource type="Texture2D" uid="uid://bgxou3q6kq7p2" path="res://resources/LilGuy/Healthy/leaf_top.png" id="9_5a6cn"]
 [ext_resource type="Texture2D" uid="uid://dx0ttmvt0ihwp" path="res://resources/LilGuy/Hungry/leaf_top.png" id="10_ghp46"]
 
@@ -53,25 +52,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"starving",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_upwpf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_ukary")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_ef81y")
-}],
-"loop": true,
-"name": &"hungry",
 "speed": 5.0
 }]
 
@@ -125,10 +105,7 @@ scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_h2c4p")
 script = ExtResource("6_aqigi")
 
-[node name="MidLeaf" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -52)
-scale = Vector2(0.05, 0.05)
-sprite_frames = SubResource("SpriteFrames_upwpf")
+[node name="MidLeaf" parent="." instance=ExtResource("7_xtumn")]
 
 [node name="LeafTop" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -62.75)
