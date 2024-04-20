@@ -22,7 +22,7 @@ var in_cauldron := false
 @onready var leafTop: AnimatedSprite2D = $LeafTop
 
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("click"):
 		if mouse_is_on and not Singleton.is_dragging:
 			is_dragging = true
@@ -37,7 +37,7 @@ func _ready():
 	reset_gene_display()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# 
 	if is_dragging and is_on_wall():
 		var collided_object = get_last_slide_collision().get_collider()
