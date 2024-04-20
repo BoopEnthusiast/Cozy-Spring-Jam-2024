@@ -4,7 +4,7 @@ var killPotionUnlocked = false
 var killArray: Array[String] = ["????????????", "YYYYXXXXZZZZ"]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	
 	if Singleton.score < 150:
 		text = killArray[0]

@@ -17,7 +17,7 @@ var slowPotionUnlocked = false
 var slowArray: Array[String] = [\"??????????\", \"XYZZYZXXZ\"]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Singleton.score < 15:
 		text = slowArray[0]
 		

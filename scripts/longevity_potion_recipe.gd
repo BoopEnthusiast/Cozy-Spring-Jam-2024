@@ -4,7 +4,7 @@ var longevityPotionUnlocked = false
 var longArray: Array[String] = ["??????????", "ZZZYYZYXXX"]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	
 	if Singleton.score < 30:
 		text = longArray[0]

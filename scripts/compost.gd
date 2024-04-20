@@ -9,5 +9,5 @@ func _on_body_entered(body):
 		Singleton.food_Left += 1
 
 
-func _process(delta):
+func _process(_delta):
 	food_left_display.text = "Food left: " + str(Singleton.food_Left)

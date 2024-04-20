@@ -6,7 +6,7 @@ extends Node2D
 func _enter_tree():
 	Singleton.main_node = self
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		pause_menu.visible = true
 		get_tree().paused = true
