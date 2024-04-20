@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cf46qb3d2735i"]
+[gd_scene load_steps=38 format=3 uid="uid://cf46qb3d2735i"]
 
 [ext_resource type="Script" path="res://scripts/lil_guy.gd" id="1_j35jn"]
 [ext_resource type="Texture2D" uid="uid://c5xjhp4uxgt48" path="res://resources/LilGuy/Starving/dead.png" id="2_5jx45"]
@@ -34,16 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://c4hxflrj2u76n" path="res://resources/LilGuy/Starving/Walk/starving_walk_5.png" id="27_4jf7p"]
 [ext_resource type="Texture2D" uid="uid://c3u7trnp2xwsp" path="res://resources/LilGuy/Starving/Walk/starving_walk_6.png" id="28_xkllt"]
 [ext_resource type="Texture2D" uid="uid://rvr07uermpe8" path="res://resources/LilGuy/Starving/Walk/starving_walk_7.png" id="29_jv4nf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3xo7"]
-size = Vector2(44, 86)
-
-[sub_resource type="Gradient" id="Gradient_1fl2r"]
-offsets = PackedFloat32Array(0.53012)
-colors = PackedColorArray(0.514358, 0.584527, 0.296751, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_yd7jm"]
-gradient = SubResource("Gradient_1fl2r")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h2c4p"]
 animations = [{
@@ -206,17 +196,14 @@ animations = [{
 }]
 
 [node name="LilGuy" type="CharacterBody2D" groups=["lil_guy"]]
+scale = Vector2(1.5, 1.5)
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_j35jn")
 
-[node name="Collider" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_o3xo7")
-
-[node name="PlaceholderSprite" type="Sprite2D" parent="."]
-visible = false
-scale = Vector2(0.171875, 86)
-texture = SubResource("GradientTexture1D_yd7jm")
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1.2, 1.2)
+polygon = PackedVector2Array(0, 47.3333, -1.33333, 46.6667, -2.66667, 28, -6.66667, 25.3333, -9.33333, 18.6667, -12, 1.33333, -16.6667, -3.33333, -19.3333, -8.66667, -20, -14, -18, -20.6667, -14, -26, -8, -29.3333, -4.66667, -30, -8.66667, -34, -12, -38.6667, -14, -42.6667, -16, -50, 16, -50, 14, -42.6667, 12, -38, 8.66667, -34, 4.66667, -30, 9.33333, -28.6667, 14.6667, -25.3333, 19.3333, -18.6667, 20, -11.3333, 18.6667, -6.66667, 15.3333, -1.33333, 12, 1.33333, 9.33333, 19.3333, 6.66667, 25.3333, 2.66667, 28, 1.33333, 46.6667)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
@@ -235,14 +222,13 @@ autowrap_mode = 1
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_h2c4p")
-animation = &"dead"
+animation = &"healthy_walk"
 script = ExtResource("6_aqigi")
 
 [node name="MidLeaf" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -52)
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_upwpf")
-animation = &"hungry"
 
 [node name="LeafTop" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -62.75)

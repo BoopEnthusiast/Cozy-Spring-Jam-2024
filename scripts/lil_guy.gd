@@ -16,7 +16,6 @@ var in_cauldron := false
 
 @onready var label: Label = $Label
 @onready var timer: Timer = $Timer
-@onready var collider: CollisionShape2D = $Collider
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var midLeaf: AnimatedSprite2D = $MidLeaf
 @onready var leafTop: AnimatedSprite2D = $LeafTop
