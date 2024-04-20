@@ -9,9 +9,8 @@ func _enter_tree():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		pause_menu.visible = true
-		print("pausing")
 		get_tree().paused = true
-		print(pause_menu.get_child(0).global_position)
+	
 		
 		
 
