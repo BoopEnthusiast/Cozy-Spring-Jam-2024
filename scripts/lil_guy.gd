@@ -18,6 +18,8 @@ var in_cauldron := false
 @onready var timer: Timer = $Timer
 @onready var collider: CollisionShape2D = $Collider
 @onready var sprite: AnimatedSprite2D = $Sprite
+@onready var midLeaf: AnimatedSprite2D = $MidLeaf
+@onready var leafTop: AnimatedSprite2D = $LeafTop
 
 
 func _input(event):
@@ -111,13 +113,17 @@ func get_genes_as_string() -> String:
 func update_sprite():
 	# Flip the horizontals of the animation depending on the direction
 	sprite.flip_h = direction.x > 0
-	
+	print(current_hunger_state)
 	# Play the animation based off the food level
 	if current_hunger_state == FoodLevel.HEALTHY:
 		sprite.play("healthy_walk")
 	if current_hunger_state == FoodLevel.HUNGRY:
 		sprite.play("hungry_walk")
+		midLeaf.play("hungry")
+		leafTop.play("hungry")
 	if current_hunger_state == FoodLevel.STARVING:
 		sprite.play("hungry_walk")
+		midLeaf.hide()
+		leafTop.hide()
 	if current_hunger_state == FoodLevel.DEAD:
 		sprite.play("dead")

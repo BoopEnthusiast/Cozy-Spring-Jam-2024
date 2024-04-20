@@ -235,13 +235,14 @@ autowrap_mode = 1
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_h2c4p")
-animation = &"starving_walk"
+animation = &"dead"
 script = ExtResource("6_aqigi")
 
 [node name="MidLeaf" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -52)
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_upwpf")
+animation = &"hungry"
 
 [node name="LeafTop" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -62.75)
