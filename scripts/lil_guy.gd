@@ -64,10 +64,13 @@ func _physics_process(_delta):
 	# Die when running out of hunger
 	if timer.time_left <= 20 and timer.time_left > 10:
 		current_hunger_state = FoodLevel.HUNGRY
+		hunger_changed.emit()
 	if timer.time_left <= 10 and timer.time_left > 0:
 		current_hunger_state = FoodLevel.STARVING
+		hunger_changed.emit()
 	if timer.time_left <= 0:
 		current_hunger_state = FoodLevel.DEAD
+		hunger_changed.emit()
 	
 	update_sprite()
 	
