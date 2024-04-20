@@ -8,10 +8,11 @@ var mouse_is_on := false
 var is_dragging := false
 var hunger_state: int = 0
 var genes: Array[String]
+var food_worth: int = 1
 
 @onready var label: Label = $Label
 @onready var timer: Timer = $Timer
-
+@onready var collider: CollisionShape2D = $Collider
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):
