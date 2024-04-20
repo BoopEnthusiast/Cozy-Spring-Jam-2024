@@ -4,7 +4,7 @@ var foodPotionUnlocked = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Singleton.score >= 16:
+	if Singleton.score >= 200:
 		foodPotionUnlocked = true
 		
 	if foodPotionUnlocked:

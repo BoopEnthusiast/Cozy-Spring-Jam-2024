@@ -41,6 +41,7 @@ text = "Dispense Z"
 gene = "Z"
 
 [node name="PauseMenu" parent="." instance=ExtResource("6_g71jd")]
+visible = false
 
 [node name="Cauldron" parent="." instance=ExtResource("4_1x7nn")]
 position = Vector2(356, 461)
