@@ -2,11 +2,12 @@ extends Area2D
 class_name cauldron
 
 var combanatiom: Array[String]
+var mouse_down: bool
 @onready var label: Label = $Label
 @onready var preloaded = preload("res://scenes/lil_guy.tscn")
 
 func _on_body_entered(body):
-	if Singleton.is_dragging and body is LilGuy:
+	if body.is_dragging and body is LilGuy:
 		var lilGuy: LilGuy = body
 		combanatiom.append_array(lilGuy.genes)
 		get_parent().remove_child(lilGuy)
