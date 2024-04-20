@@ -34,4 +34,5 @@ func _on_lil_guy_hunger_changed(hunger_state: int):
 
 
 func _on_lil_guy_merged():
-	mid_leaves.reduce()
+	#mid_leaves.reduce()
+	pass
