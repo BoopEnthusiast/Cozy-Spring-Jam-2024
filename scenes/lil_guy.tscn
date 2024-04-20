@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cf46qb3d2735i"]
+[gd_scene load_steps=36 format=3 uid="uid://cf46qb3d2735i"]
 
 [ext_resource type="Script" path="res://scripts/lil_guy.gd" id="1_j35jn"]
 [ext_resource type="Texture2D" uid="uid://c5xjhp4uxgt48" path="res://resources/LilGuy/Starving/dead.png" id="2_5jx45"]
@@ -9,8 +9,6 @@
 [ext_resource type="Script" path="res://scripts/lil_guy_sprite_display.gd" id="6_aqigi"]
 [ext_resource type="Texture2D" uid="uid://de4lqagqcfnet" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_2.png" id="6_uj6yd"]
 [ext_resource type="Texture2D" uid="uid://ce3jrjup6epd8" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_3.png" id="7_b07vc"]
-[ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="7_ukary"]
-[ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="8_ef81y"]
 [ext_resource type="Texture2D" uid="uid://d2fv0u503r3jt" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_4.png" id="8_vnepx"]
 [ext_resource type="Texture2D" uid="uid://bgxou3q6kq7p2" path="res://resources/LilGuy/Healthy/leaf_top.png" id="9_5a6cn"]
 [ext_resource type="Texture2D" uid="uid://d1sl5ldluylnb" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_5.png" id="9_p1pyy"]
@@ -34,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://c4hxflrj2u76n" path="res://resources/LilGuy/Starving/Walk/starving_walk_5.png" id="27_4jf7p"]
 [ext_resource type="Texture2D" uid="uid://c3u7trnp2xwsp" path="res://resources/LilGuy/Starving/Walk/starving_walk_6.png" id="28_xkllt"]
 [ext_resource type="Texture2D" uid="uid://rvr07uermpe8" path="res://resources/LilGuy/Starving/Walk/starving_walk_7.png" id="29_jv4nf"]
+[ext_resource type="PackedScene" uid="uid://bloobwnynp8e2" path="res://scenes/mid_leaf.tscn" id="31_bi7gn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h2c4p"]
 animations = [{
@@ -157,25 +156,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_upwpf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_ukary")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_ef81y")
-}],
-"loop": true,
-"name": &"hungry",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_vh1sg"]
 animations = [{
 "frames": [{
@@ -210,31 +190,21 @@ wait_time = 30.0
 one_shot = true
 autostart = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = -91.0
-offset_top = -38.0
-offset_right = 91.0
-offset_bottom = 39.0
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 1
-
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_h2c4p")
 animation = &"healthy_walk"
 script = ExtResource("6_aqigi")
 
-[node name="MidLeaf" type="AnimatedSprite2D" parent="."]
+[node name="MidLeaf" parent="." instance=ExtResource("31_bi7gn")]
 position = Vector2(0, -52)
-scale = Vector2(0.05, 0.05)
-sprite_frames = SubResource("SpriteFrames_upwpf")
 
 [node name="LeafTop" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -62.75)
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_vh1sg")
 
+[connection signal="hunger_changed" from="." to="." method="update_sprite"]
 [connection signal="hunger_changed" from="." to="Sprite" method="_on_lil_guy_hunger_changed"]
 [connection signal="merged" from="." to="Sprite" method="_on_lil_guy_merged"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
