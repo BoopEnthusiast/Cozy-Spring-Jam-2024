@@ -118,15 +118,16 @@ func update_sprite():
 	sprite.flip_h = direction.x > 0
 	
 	# Play the animation based off the food level
-	if current_hunger_state == FoodLevel.HEALTHY:
-		sprite.play("healthy_walk")
-	if current_hunger_state == FoodLevel.HUNGRY:
-		sprite.play("hungry_walk")
-		midLeaf.play("hungry")
-		leafTop.play("hungry")
-	if current_hunger_state == FoodLevel.STARVING:
-		sprite.play("hungry_walk")
-		midLeaf.hide()
-		leafTop.hide()
-	if current_hunger_state == FoodLevel.DEAD:
-		sprite.play("dead")
+	match current_hunger_state:
+		FoodLevel.HEALTHY:
+			sprite.play("healthy_walk")
+		FoodLevel.HUNGRY: 
+			sprite.play("hungry_walk")
+			midLeaf.play("hungry")
+			leafTop.play("hungry")
+		FoodLevel.STARVING:
+			sprite.play("hungry_walk")
+			midLeaf.hide()
+			leafTop.hide()
+		FoodLevel.DEAD:
+			sprite.play("dead")
