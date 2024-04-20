@@ -6,4 +6,3 @@ func _on_body_entered(body):
 		Singleton.food_Left -= 1
 		body.current_hunger_state = body.FoodLevel.HEALTHY
 		body.hunger_changed.emit()
-		print(body.current_hunger_state)
