@@ -12,7 +12,7 @@ colors = PackedColorArray(0.514358, 0.584527, 0.296751, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_yd7jm"]
 gradient = SubResource("Gradient_1fl2r")
 
-[node name="LilGuy" type="CharacterBody2D" groups=["lil_guy"]]
+[node name="LilGuy" type="CharacterBody2D"]
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_j35jn")
