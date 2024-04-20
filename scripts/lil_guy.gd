@@ -47,12 +47,14 @@ func _physics_process(delta):
 		direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
 	
 	# Move if not dead
-	if not is_dragging:
-		velocity = direction * speed
-	elif is_dragging:
+	
+	if is_dragging:
 		global_position = get_global_mouse_position()
+		velocity = Vector2.ZERO
 	elif current_hunger_state == FoodLevel.DEAD:
 		velocity = Vector2.ZERO
+	else:
+		velocity = direction * speed
 	
 	move_and_slide()
 
