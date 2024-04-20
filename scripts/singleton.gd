@@ -17,8 +17,8 @@ const FOOD_INCREASE_RECIPE = "ZYXYXZYX"
 const SENTIENCE_RECIPE = "ZYXYZXZXYZXYYZXZXYXZXXYZX"
 const STRENGTH_RECIPE = "XZYXZXYZYXZXZXZYXYYZXYYZXXZYY"
 const ALL_RECIPES = [SLOW_RECIPE, LENGTHEN_RECIPE, HITBOX_RECIPE, POINTS_RECIPE, KILL_ALL_RECIPE, FOOD_INCREASE_RECIPE, SENTIENCE_RECIPE, STRENGTH_RECIPE]
-var RECIPE_EFFECTORS = [Callable(self, "slow_lil_guys"), Callable(self, "lengthen_lives"), Callable(self, "bigger_hitboxes"), Callable(self, "point_gain_increase"), Callable(self, "kill_all"), Callable(self, "increase_food_worth"), Callable(self,"gain_sentience"), Callable(self, "gain_strength")]
 
+var recipe_effectors: Array[Callable] = [Callable(self, "slow_lil_guys"), Callable(self, "lengthen_lives"), Callable(self, "bigger_hitboxes"), Callable(self, "point_gain_increase"), Callable(self, "kill_all"), Callable(self, "increase_food_worth"), Callable(self,"gain_sentience"), Callable(self, "gain_strength")]
 
 # Global variables
 var main_node: Node2D
