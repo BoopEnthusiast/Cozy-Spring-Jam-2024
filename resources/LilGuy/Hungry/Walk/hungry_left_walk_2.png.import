@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caf70k475l8mh"
-path="res://.godot/imported/hungry_left_walk_0.png-2b1488c4a392e25ccc704e205896fc65.ctex"
+uid="uid://buf6rnpmtn2cv"
+path="res://.godot/imported/hungry_left_walk_2.png-6a0fe56fd6c18eac15d66c48ab6422a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_0.png"
-dest_files=["res://.godot/imported/hungry_left_walk_0.png-2b1488c4a392e25ccc704e205896fc65.ctex"]
+source_file="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_2.png"
+dest_files=["res://.godot/imported/hungry_left_walk_2.png-6a0fe56fd6c18eac15d66c48ab6422a4.ctex"]
 
 [params]
 

@@ -4,36 +4,36 @@
 [ext_resource type="Texture2D" uid="uid://c5xjhp4uxgt48" path="res://resources/LilGuy/Starving/dead.png" id="2_5jx45"]
 [ext_resource type="Texture2D" uid="uid://dckvds4iwod4h" path="res://resources/LilGuy/Healthy/body.png" id="3_vxd5f"]
 [ext_resource type="Texture2D" uid="uid://crcrl62mg1kjj" path="res://resources/LilGuy/Hungry/body.png" id="4_4jjmk"]
-[ext_resource type="Texture2D" uid="uid://3pbwl4j4o23c" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_0.png" id="5_xb2ba"]
+[ext_resource type="Texture2D" uid="uid://3pbwl4j4o23c" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_0.png" id="4_dmvru"]
+[ext_resource type="Texture2D" uid="uid://cgirb5ccqqrc4" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_1.png" id="5_t77jg"]
 [ext_resource type="Script" path="res://scripts/lil_guy_sprite_display.gd" id="6_aqigi"]
-[ext_resource type="Texture2D" uid="uid://cgirb5ccqqrc4" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_1.png" id="6_tvbl6"]
-[ext_resource type="Texture2D" uid="uid://de4lqagqcfnet" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_2.png" id="7_dw5h1"]
+[ext_resource type="Texture2D" uid="uid://de4lqagqcfnet" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_2.png" id="6_uj6yd"]
+[ext_resource type="Texture2D" uid="uid://ce3jrjup6epd8" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_3.png" id="7_b07vc"]
 [ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="7_ukary"]
 [ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="8_ef81y"]
-[ext_resource type="Texture2D" uid="uid://ce3jrjup6epd8" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_3.png" id="8_s4yab"]
+[ext_resource type="Texture2D" uid="uid://d2fv0u503r3jt" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_4.png" id="8_vnepx"]
 [ext_resource type="Texture2D" uid="uid://bgxou3q6kq7p2" path="res://resources/LilGuy/Healthy/leaf_top.png" id="9_5a6cn"]
-[ext_resource type="Texture2D" uid="uid://d2fv0u503r3jt" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_4.png" id="9_n1g0n"]
-[ext_resource type="Texture2D" uid="uid://d1sl5ldluylnb" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_5.png" id="10_c8y63"]
+[ext_resource type="Texture2D" uid="uid://d1sl5ldluylnb" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_5.png" id="9_p1pyy"]
+[ext_resource type="Texture2D" uid="uid://cm3k0leg0oafa" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_6.png" id="10_00u0r"]
 [ext_resource type="Texture2D" uid="uid://dx0ttmvt0ihwp" path="res://resources/LilGuy/Hungry/leaf_top.png" id="10_ghp46"]
-[ext_resource type="Texture2D" uid="uid://cm3k0leg0oafa" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_6.png" id="11_xisah"]
-[ext_resource type="Texture2D" uid="uid://bgdcxkpky4v5j" path="res://resources/LilGuy/Healthy/Walk left/happy_left_walk_7.png" id="12_kpt8y"]
-[ext_resource type="Texture2D" uid="uid://caf70k475l8mh" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_0.png" id="13_lcvk3"]
-[ext_resource type="Texture2D" uid="uid://ccmjgkh2xq518" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_1.png" id="14_15v63"]
-[ext_resource type="Texture2D" uid="uid://buf6rnpmtn2cv" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_2.png" id="15_ooupo"]
-[ext_resource type="Texture2D" uid="uid://dwkgi8mnmb2af" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_3.png" id="16_lfy5y"]
-[ext_resource type="Texture2D" uid="uid://bwlrd5o6c0xjl" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_4.png" id="17_numbc"]
-[ext_resource type="Texture2D" uid="uid://cyws4u71hjqhc" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_5.png" id="18_7vg30"]
-[ext_resource type="Texture2D" uid="uid://c1e3tdcfe5d5m" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_6.png" id="19_pmtpy"]
-[ext_resource type="Texture2D" uid="uid://c2r1fqf18wjd0" path="res://resources/LilGuy/Hungry/walk left/hungry_left_walk_7.png" id="20_uhtnp"]
+[ext_resource type="Texture2D" uid="uid://bgdcxkpky4v5j" path="res://resources/LilGuy/Healthy/Walk/happy_left_walk_7.png" id="11_aduim"]
+[ext_resource type="Texture2D" uid="uid://caf70k475l8mh" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_0.png" id="13_ipmr8"]
+[ext_resource type="Texture2D" uid="uid://ccmjgkh2xq518" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_1.png" id="14_r24mf"]
+[ext_resource type="Texture2D" uid="uid://buf6rnpmtn2cv" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_2.png" id="15_k3mgk"]
+[ext_resource type="Texture2D" uid="uid://dwkgi8mnmb2af" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_3.png" id="16_3vuye"]
+[ext_resource type="Texture2D" uid="uid://bwlrd5o6c0xjl" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_4.png" id="17_pwwow"]
+[ext_resource type="Texture2D" uid="uid://cyws4u71hjqhc" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_5.png" id="18_s3wj0"]
+[ext_resource type="Texture2D" uid="uid://c1e3tdcfe5d5m" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_6.png" id="19_71gr7"]
+[ext_resource type="Texture2D" uid="uid://c2r1fqf18wjd0" path="res://resources/LilGuy/Hungry/Walk/hungry_left_walk_7.png" id="20_5ww1s"]
 [ext_resource type="Texture2D" uid="uid://d4jqxijidt3m0" path="res://resources/LilGuy/Starving/starving.png" id="21_hsy7g"]
-[ext_resource type="Texture2D" uid="uid://ijdxjmf4ccd" path="res://resources/LilGuy/Starving/walk_left/starving_walk_0.png" id="22_agi3p"]
-[ext_resource type="Texture2D" uid="uid://vmvl12muq3fp" path="res://resources/LilGuy/Starving/walk_left/starving_walk_1.png" id="23_sk25b"]
-[ext_resource type="Texture2D" uid="uid://q81bswtoicnq" path="res://resources/LilGuy/Starving/walk_left/starving_walk_2.png" id="24_lxnqv"]
-[ext_resource type="Texture2D" uid="uid://dial632v26c14" path="res://resources/LilGuy/Starving/walk_left/starving_walk_3.png" id="25_36iex"]
-[ext_resource type="Texture2D" uid="uid://dgg3od4miuo2e" path="res://resources/LilGuy/Starving/walk_left/starving_walk_4.png" id="26_cfmyt"]
-[ext_resource type="Texture2D" uid="uid://c4hxflrj2u76n" path="res://resources/LilGuy/Starving/walk_left/starving_walk_5.png" id="27_jkxmx"]
-[ext_resource type="Texture2D" uid="uid://c3u7trnp2xwsp" path="res://resources/LilGuy/Starving/walk_left/starving_walk_6.png" id="28_oig6s"]
-[ext_resource type="Texture2D" uid="uid://rvr07uermpe8" path="res://resources/LilGuy/Starving/walk_left/starving_walk_7.png" id="29_8lyns"]
+[ext_resource type="Texture2D" uid="uid://ijdxjmf4ccd" path="res://resources/LilGuy/Starving/Walk/starving_walk_0.png" id="22_qwu8h"]
+[ext_resource type="Texture2D" uid="uid://vmvl12muq3fp" path="res://resources/LilGuy/Starving/Walk/starving_walk_1.png" id="23_2ufg5"]
+[ext_resource type="Texture2D" uid="uid://q81bswtoicnq" path="res://resources/LilGuy/Starving/Walk/starving_walk_2.png" id="24_k8qqx"]
+[ext_resource type="Texture2D" uid="uid://dial632v26c14" path="res://resources/LilGuy/Starving/Walk/starving_walk_3.png" id="25_2qa0k"]
+[ext_resource type="Texture2D" uid="uid://dgg3od4miuo2e" path="res://resources/LilGuy/Starving/Walk/starving_walk_4.png" id="26_y8ca1"]
+[ext_resource type="Texture2D" uid="uid://c4hxflrj2u76n" path="res://resources/LilGuy/Starving/Walk/starving_walk_5.png" id="27_4jf7p"]
+[ext_resource type="Texture2D" uid="uid://c3u7trnp2xwsp" path="res://resources/LilGuy/Starving/Walk/starving_walk_6.png" id="28_xkllt"]
+[ext_resource type="Texture2D" uid="uid://rvr07uermpe8" path="res://resources/LilGuy/Starving/Walk/starving_walk_7.png" id="29_jv4nf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3xo7"]
 size = Vector2(44, 86)
@@ -65,31 +65,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_xb2ba")
+"texture": ExtResource("4_dmvru")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_tvbl6")
+"texture": ExtResource("5_t77jg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_dw5h1")
+"texture": ExtResource("6_uj6yd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_s4yab")
+"texture": ExtResource("7_b07vc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_n1g0n")
+"texture": ExtResource("8_vnepx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_c8y63")
+"texture": ExtResource("9_p1pyy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_xisah")
+"texture": ExtResource("10_00u0r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_kpt8y")
+"texture": ExtResource("11_aduim")
 }],
 "loop": true,
-"name": &"healthy_walk_left",
+"name": &"healthy_walk",
 "speed": 5.0
 }, {
 "frames": [{
@@ -102,31 +102,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_lcvk3")
+"texture": ExtResource("13_ipmr8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_15v63")
+"texture": ExtResource("14_r24mf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_ooupo")
+"texture": ExtResource("15_k3mgk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_lfy5y")
+"texture": ExtResource("16_3vuye")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_numbc")
+"texture": ExtResource("17_pwwow")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_7vg30")
+"texture": ExtResource("18_s3wj0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_pmtpy")
+"texture": ExtResource("19_71gr7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_uhtnp")
+"texture": ExtResource("20_5ww1s")
 }],
 "loop": true,
-"name": &"hungry_walk_left",
+"name": &"hungry_walk",
 "speed": 5.0
 }, {
 "frames": [{
@@ -139,31 +139,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_agi3p")
+"texture": ExtResource("22_qwu8h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_sk25b")
+"texture": ExtResource("23_2ufg5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_lxnqv")
+"texture": ExtResource("24_k8qqx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_36iex")
+"texture": ExtResource("25_2qa0k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_cfmyt")
+"texture": ExtResource("26_y8ca1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_jkxmx")
+"texture": ExtResource("27_4jf7p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_oig6s")
+"texture": ExtResource("28_xkllt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_8lyns")
+"texture": ExtResource("29_jv4nf")
 }],
 "loop": true,
-"name": &"starving_walk_left",
+"name": &"starving_walk",
 "speed": 5.0
 }]
 
@@ -235,7 +235,7 @@ autowrap_mode = 1
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_h2c4p")
-animation = &"starving_walk_left"
+animation = &"starving_walk"
 script = ExtResource("6_aqigi")
 
 [node name="MidLeaf" type="AnimatedSprite2D" parent="."]

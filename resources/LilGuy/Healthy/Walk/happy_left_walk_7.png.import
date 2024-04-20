@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dial632v26c14"
-path="res://.godot/imported/starving_walk_3.png-ee9e4d040d5497c42a3248af173e342e.ctex"
+uid="uid://bgdcxkpky4v5j"
+path="res://.godot/imported/happy_left_walk_7.png-2832f45e680c6ba0fee817259924f6f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/LilGuy/Starving/walk_left/starving_walk_3.png"
-dest_files=["res://.godot/imported/starving_walk_3.png-ee9e4d040d5497c42a3248af173e342e.ctex"]
+source_file="res://resources/LilGuy/Healthy/Walk/happy_left_walk_7.png"
+dest_files=["res://.godot/imported/happy_left_walk_7.png-2832f45e680c6ba0fee817259924f6f7.ctex"]
 
 [params]
 

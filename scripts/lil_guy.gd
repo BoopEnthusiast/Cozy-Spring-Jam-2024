@@ -109,11 +109,12 @@ func get_genes_as_string() -> String:
 	return concat_genes
 
 func update_sprite():
+	sprite.flip_h = direction.x > 0
 	if current_hunger_state == FoodLevel.HEALTHY:
-		sprite.play("healthy_walk_left")
+		sprite.play("healthy_walk")
 	if current_hunger_state == FoodLevel.HUNGRY:
-		sprite.play("hungry_walk_left")
+		sprite.play("hungry_walk")
 	if current_hunger_state == FoodLevel.STARVING:
-		sprite.play("hungry_walk_left")
+		sprite.play("hungry_walk")
 	if current_hunger_state == FoodLevel.DEAD:
 		sprite.play("dead")
