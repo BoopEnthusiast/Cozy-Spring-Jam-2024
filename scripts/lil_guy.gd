@@ -113,7 +113,7 @@ func get_genes_as_string() -> String:
 func update_sprite():
 	# Flip the horizontals of the animation depending on the direction
 	sprite.flip_h = direction.x > 0
-	print(current_hunger_state)
+	
 	# Play the animation based off the food level
 	if current_hunger_state == FoodLevel.HEALTHY:
 		sprite.play("healthy_walk")
