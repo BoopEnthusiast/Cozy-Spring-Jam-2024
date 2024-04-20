@@ -9,6 +9,7 @@ var current_recipe_length := 1
 
 @onready var current_label = $Current
 @onready var recipe_label = $Recipe
+@onready var slots_left_label = $SlotsLeft
 
 
 func _on_body_entered(body):
@@ -31,6 +32,14 @@ func _on_button_pressed():
 
 func update_label():
 	current_label.text = first_genes + second_genes
+	var slots_left = 2
+	if not first_genes.is_empty():
+		slots_left -= 1
+	if not second_genes.is_empty():
+		slots_left -= 1
+	slots_left_label.text = str(slots_left)
+	
+	print(current_label.text,"   ",current_recipe)
 	if current_label.text == current_recipe:
 		Singleton.score += current_recipe_length * Singleton.points_multiplier
 		Singleton.points_multiplier = 1
@@ -45,6 +54,10 @@ func update_label():
 
 func generate_recipe():
 	current_recipe = ""
+	current_recipe_length += 1
 	for i in range(current_recipe_length):
 		current_recipe += ALL_GENES.pick_random()
 	recipe_label.text = current_recipe
+	first_genes = ""
+	second_genes = ""
+	update_label()
