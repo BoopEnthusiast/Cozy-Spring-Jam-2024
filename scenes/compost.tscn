@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ducrtaqc51jlc"]
+[gd_scene load_steps=6 format=3 uid="uid://ducrtaqc51jlc"]
 
 [ext_resource type="Script" path="res://scripts/compost.gd" id="1_fn5uo"]
+[ext_resource type="PackedScene" uid="uid://muiyheruicf1" path="res://scenes/feeding_station.tscn" id="2_dd5u2"]
 [ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="2_toddf"]
 [ext_resource type="AudioStream" uid="uid://bej0u2vuuq85" path="res://resources/Music/Compost.wav" id="3_41780"]
 
@@ -11,6 +12,8 @@ size = Vector2(662, 451)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_fn5uo")
+
+[node name="FeedingStation" parent="." instance=ExtResource("2_dd5u2")]
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -228.5)
