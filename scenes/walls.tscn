@@ -113,7 +113,7 @@ texture = ExtResource("15_gf4ut")
 position = Vector2(1923, 1079)
 scale = Vector2(2.003, 2.003)
 sprite_frames = SubResource("SpriteFrames_xgw7u")
-frame_progress = 0.73653
+frame_progress = 0.625204
 
 [node name="Bushes" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-18, 1002, 219, 778, 321, 775, 375, 742, 3389, 680, 3556, 796, 3695, 832, 3775, 947, 3877, 1024, 3860, -17, -55, -49)

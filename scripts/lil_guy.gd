@@ -102,7 +102,6 @@ func get_genes_as_string() -> String:
 
 
 func update_sprite():
-	print("hello?")
 	# Flip the horizontals of the animation depending on the direction
 	sprite.flip_h = direction.x > 0
 	
