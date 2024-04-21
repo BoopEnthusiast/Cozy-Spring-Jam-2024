@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://crmdcshv7rb21"]
+[gd_scene load_steps=22 format=3 uid="uid://crmdcshv7rb21"]
 
+[ext_resource type="Script" path="res://scripts/recipe_bg.gd" id="2_d4dsd"]
 [ext_resource type="Script" path="res://scripts/book_button.gd" id="2_fpp56"]
 [ext_resource type="Texture2D" uid="uid://dtq3r2y3wova7" path="res://resources/recipe_book.png" id="2_l51jg"]
 [ext_resource type="Script" path="res://scripts/longevity_potion_recipe.gd" id="2_rh8d8"]
@@ -107,6 +108,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g1q31")
+script = ExtResource("2_d4dsd")
 
 [node name="RecipesTitle" type="RichTextLabel" parent="."]
 layout_mode = 1

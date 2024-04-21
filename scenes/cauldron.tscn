@@ -48,10 +48,10 @@ theme_override_font_sizes/font_size = 39
 text = "Clear"
 
 [node name="Recipe" type="Label" parent="."]
-offset_left = -410.0
-offset_top = -149.0
-offset_right = 410.0
-offset_bottom = -96.0
+offset_left = -409.0
+offset_top = -146.0
+offset_right = 411.0
+offset_bottom = -93.0
 theme_override_fonts/font = ExtResource("2_ynle0")
 theme_override_font_sizes/font_size = 38
 text = "X"
