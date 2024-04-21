@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ieyvylo06sde"]
+
+[ext_resource type="FontFile" uid="uid://becbow7pkc0fe" path="res://resources/Xyz-Regular.otf" id="1_18aof"]
+
+[resource]
+default_font = ExtResource("1_18aof")

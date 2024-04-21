@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ducrtaqc51jlc"]
+[gd_scene load_steps=9 format=3 uid="uid://ducrtaqc51jlc"]
 
 [ext_resource type="Script" path="res://scripts/compost.gd" id="1_fn5uo"]
+[ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="2_toddf"]
 [ext_resource type="Script" path="res://scripts/feedingstation.gd" id="2_vnd8t"]
 [ext_resource type="AudioStream" uid="uid://bej0u2vuuq85" path="res://resources/Music/Compost.wav" id="3_41780"]
 
@@ -35,6 +36,7 @@ offset_right = 134.0
 offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_toddf")
 theme_override_font_sizes/font_size = 56
 text = "Food left: "
 horizontal_alignment = 1
