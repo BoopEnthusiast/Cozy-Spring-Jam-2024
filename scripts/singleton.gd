@@ -67,18 +67,11 @@ func increase_food_worth() -> void:
 
 func gain_sentience() -> void:
 	has_sentience = true
-	if has_strength:
-		#trigger world end
-		ending_screen.visible = true
-		
 		
 
 
 func gain_strength() -> void:
 	has_strength = true
-	if has_sentience:
-		#trigger world end
-		ending_screen.visible = true
 
 
 func apply_effects() -> void:
