@@ -15,6 +15,7 @@ var food_worth: int = 1
 var in_cauldron := false
 var voices: Array[AudioStream] = [preload("res://resources/Music/LilGuy/Lil_Guy_voices-001.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-002.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-003.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-004.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-005.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-006.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-007.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-008.wav")]
 var merge: AudioStream = preload("res://resources/Music/LilGuy/Merge.wav")
+var last_dragging: bool = false
 
 @onready var timer: Timer = $Timer
 @onready var sprite: AnimatedSprite2D = $Sprite
@@ -24,6 +25,7 @@ var merge: AudioStream = preload("res://resources/Music/LilGuy/Merge.wav")
 
 
 func _input(_event):
+	last_dragging = is_dragging
 	if Input.is_action_just_pressed("click"):
 		if mouse_is_on and not Singleton.is_dragging:
 			audioStream.stream = voices[randi_range(0, len(voices) - 1)]

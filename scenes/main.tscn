@@ -86,6 +86,10 @@ anchor_left = -0.35
 anchor_top = 0.454
 anchor_right = -0.35
 anchor_bottom = 0.454
+offset_left = -1656.0
+offset_top = -1409.64
+offset_right = 2637.0
+offset_bottom = 1561.36
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_fyh3d")
