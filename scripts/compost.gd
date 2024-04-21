@@ -5,10 +5,11 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	if body.is_dragging and body is LilGuy:
-		audioStream.play()
-		body.queue_free()
-		Singleton.food_Left += 1
+	if body is LilGuy:
+		if body.is_dragging:
+			audioStream.play()
+			body.queue_free()
+			Singleton.food_Left += 1
 
 
 func _process(_delta):

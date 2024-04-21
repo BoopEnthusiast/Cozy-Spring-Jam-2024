@@ -1,27 +1,119 @@
-[gd_scene load_steps=3 format=3 uid="uid://cumdn73osuk3t"]
+[gd_scene load_steps=21 format=3 uid="uid://cumdn73osuk3t"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo71k"]
-size = Vector2(41.5, 2160)
+[ext_resource type="Texture2D" uid="uid://8elxhwpus5y8" path="res://resources/bg/bg animation/couldrum_animation_0.png" id="1_jdpvg"]
+[ext_resource type="Texture2D" uid="uid://buawo3xcygl4f" path="res://resources/bg/bg animation/couldrum_animation_1.png" id="2_x7lpk"]
+[ext_resource type="Texture2D" uid="uid://fvh08fwlxwy8" path="res://resources/bg/bg animation/couldrum_animation_2.png" id="3_73smn"]
+[ext_resource type="Texture2D" uid="uid://uyriixibnj4f" path="res://resources/bg/bg animation/couldrum_animation_3.png" id="4_gurdi"]
+[ext_resource type="Texture2D" uid="uid://dhi2pwnv70877" path="res://resources/bg/bg animation/couldrum_animation_4.png" id="5_u1in5"]
+[ext_resource type="Texture2D" uid="uid://cwptd4u84nqob" path="res://resources/bg/bg animation/couldrum_animation_5.png" id="6_w2mx4"]
+[ext_resource type="Texture2D" uid="uid://bqtmhhf20vmpd" path="res://resources/bg/bg animation/couldrum_animation_6.png" id="7_c0y2o"]
+[ext_resource type="Texture2D" uid="uid://b6dwqxk82y7b5" path="res://resources/bg/bg animation/couldrum_animation_7.png" id="8_wvtjv"]
+[ext_resource type="Texture2D" uid="uid://c2heasuw82kpx" path="res://resources/bg/bg animation/couldrum_animation_8.png" id="9_i5bp5"]
+[ext_resource type="Texture2D" uid="uid://c4ndi0k65t3ae" path="res://resources/bg/bg animation/couldrum_animation_9.png" id="10_2ctm7"]
+[ext_resource type="Texture2D" uid="uid://y2cjrutbw87u" path="res://resources/bg/bg animation/couldrum_animation_10.png" id="11_vrp8d"]
+[ext_resource type="Texture2D" uid="uid://bkq70sxh81ay3" path="res://resources/bg/bg animation/couldrum_animation_11.png" id="12_ibw4j"]
+[ext_resource type="Texture2D" uid="uid://j8qfdlm2yci2" path="res://resources/bg/bg animation/couldrum_animation_12.png" id="13_entpn"]
+[ext_resource type="Texture2D" uid="uid://dhovkd5n0hirx" path="res://resources/bg/bg animation/couldrum_animation_13.png" id="14_e8g33"]
+[ext_resource type="Texture2D" uid="uid://0jr5dghsd1n5" path="res://resources/bg/backgroung.png" id="15_gf4ut"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyx0d"]
-size = Vector2(41.5, 3840)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3v848"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eemuw"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_movvl"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wqr50"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xgw7u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jdpvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x7lpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_73smn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gurdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u1in5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w2mx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c0y2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wvtjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i5bp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2ctm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vrp8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ibw4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_entpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_e8g33")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Walls" type="StaticBody2D"]
 
 [node name="Left" type="CollisionShape2D" parent="."]
-position = Vector2(-20.75, 1080)
-shape = SubResource("RectangleShape2D_mo71k")
+position = Vector2(0, 1704)
+shape = SubResource("WorldBoundaryShape2D_3v848")
 
 [node name="Right" type="CollisionShape2D" parent="."]
-position = Vector2(3861, 1080)
-shape = SubResource("RectangleShape2D_mo71k")
+position = Vector2(3840, 1027)
+shape = SubResource("WorldBoundaryShape2D_eemuw")
 
 [node name="Bottom" type="CollisionShape2D" parent="."]
-position = Vector2(1920, 2181)
+position = Vector2(1924, 3855)
 rotation = -1.5708
-shape = SubResource("RectangleShape2D_jyx0d")
+shape = SubResource("WorldBoundaryShape2D_movvl")
 
 [node name="Top" type="CollisionShape2D" parent="."]
-position = Vector2(1920, -21)
+position = Vector2(1920, 0)
 rotation = -1.5708
-shape = SubResource("RectangleShape2D_jyx0d")
+shape = SubResource("WorldBoundaryShape2D_wqr50")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_gf4ut")
+
+[node name="Bubbles" type="AnimatedSprite2D" parent="CanvasLayer/Background"]
+position = Vector2(1923, 1079)
+scale = Vector2(2.003, 2.003)
+sprite_frames = SubResource("SpriteFrames_xgw7u")
+frame_progress = 0.73653
+
+[node name="Bushes" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-18, 1002, 219, 778, 321, 775, 375, 742, 3389, 680, 3556, 796, 3695, 832, 3775, 947, 3877, 1024, 3860, -17, -55, -49)
