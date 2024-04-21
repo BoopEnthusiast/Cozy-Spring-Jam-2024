@@ -75,13 +75,10 @@ text = "Score: "
 script = ExtResource("7_3vixa")
 
 [node name="EndingScreen" parent="." instance=ExtResource("9_oil3o")]
-visible = false
 
 [node name="RecipesScreen" type="CanvasLayer" parent="."]
 
 [node name="RecipeBackground" parent="RecipesScreen" instance=ExtResource("8_hntjs")]
-offset_top = -429.0
-offset_bottom = 2542.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_fyh3d")
