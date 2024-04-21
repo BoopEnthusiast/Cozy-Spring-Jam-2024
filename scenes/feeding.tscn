@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw7axaukouov0"]
+
+[ext_resource type="Script" path="res://scripts/feedingstation.gd" id="1_febpj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f83h4"]
+size = Vector2(260, 312.8)
+
+[node name="Feeding" type="Area2D"]
+script = ExtResource("1_febpj")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, 52)
+shape = SubResource("RectangleShape2D_f83h4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

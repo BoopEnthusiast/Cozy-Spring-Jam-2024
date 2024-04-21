@@ -6,7 +6,6 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body is LilGuy:
-		print(body.is_dragging)
 		if body.is_dragging:
 			audioStream.play()
 			body.queue_free()
