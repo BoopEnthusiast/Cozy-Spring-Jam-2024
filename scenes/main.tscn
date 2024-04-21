@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scripts/score_text.gd" id="7_3vixa"]
 [ext_resource type="PackedScene" uid="uid://crmdcshv7rb21" path="res://scenes/recipes_screen.tscn" id="8_hntjs"]
 [ext_resource type="PackedScene" uid="uid://cwhb1ub5dsr8j" path="res://scenes/ending_screen.tscn" id="9_oil3o"]
-[ext_resource type="AudioStream" uid="uid://5xws4pnh8f6i" path="res://resources/Music/Main-theme.wav" id="10_pab80"]
+[ext_resource type="AudioStream" uid="uid://5xws4pnh8f6i" path="res://resources/Music/Main-theme.wav" id="10_fyh3d"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ju8m2")
@@ -80,8 +80,7 @@ visible = false
 [node name="RecipeBackground" parent="RecipesScreen" instance=ExtResource("8_hntjs")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_pab80")
-volume_db = -11.5
-autoplay = true
+stream = ExtResource("10_fyh3d")
+volume_db = -12.0
 
-[node name="Cauldron2" parent="." instance=ExtResource("4_1x7nn")]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

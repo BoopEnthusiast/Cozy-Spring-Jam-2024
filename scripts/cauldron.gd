@@ -10,6 +10,7 @@ var current_recipe_length := 1
 @onready var current_label = $Current
 @onready var recipe_label = $Recipe
 @onready var slots_left_label = $SlotsLeft
+@onready var audioStream: AudioStreamPlayer = $AudioStreamPlayer
 
 
 func _on_body_entered(body):
@@ -21,6 +22,7 @@ func _on_body_entered(body):
 		elif second_genes.is_empty():
 			second_genes = body.get_genes_as_string()
 			body.queue_free()
+		audioStream.play()
 		update_label()
 
 

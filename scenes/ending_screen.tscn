@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://cwhb1ub5dsr8j"]
+[gd_scene load_steps=3 format=3 uid="uid://cwhb1ub5dsr8j"]
+
+[ext_resource type="Script" path="res://scripts/end_screen_script.gd" id="1_kfrhs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2007f"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="EndingScreen" type="CanvasLayer"]
 
@@ -6,21 +11,24 @@
 offset_left = 4.0
 offset_right = 3843.0
 offset_bottom = 2160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2007f")
+script = ExtResource("1_kfrhs")
 
-[node name="GameOverTitle" type="RichTextLabel" parent="EndScreenPanel"]
-layout_mode = 0
-offset_left = 1361.0
-offset_top = 30.0
-offset_right = 2504.0
-offset_bottom = 374.0
-theme_override_font_sizes/normal_font_size = 200
-text = "Game Over"
-
-[node name="GameOverText" type="RichTextLabel" parent="EndScreenPanel"]
-layout_mode = 0
-offset_left = 295.0
-offset_top = 362.0
-offset_right = 3574.0
-offset_bottom = 1992.0
-theme_override_font_sizes/normal_font_size = 100
-text = "You gave your LilGuys too much power! "
+[node name="GameOverText" type="Label" parent="EndScreenPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1938.5
+offset_top = -274.0
+offset_right = 1914.5
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "You gave your lil guys too much power! They no longer see a reason to be under your control and have overthrown you on their new quest for world domination."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
