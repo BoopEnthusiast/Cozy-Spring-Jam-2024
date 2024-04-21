@@ -25,6 +25,7 @@ var main_node: Node2D
 var is_dragging := false
 var food_Left := 0
 var score := 0
+var gameOver := false
 
 # Which effects have been applied and how much
 var speed = 300.0
@@ -67,11 +68,15 @@ func increase_food_worth() -> void:
 
 func gain_sentience() -> void:
 	has_sentience = true
+	if has_strength:
+		gameOver = true
 		
 
 
 func gain_strength() -> void:
 	has_strength = true
+	if has_sentience:
+		gameOver = true
 
 
 func apply_effects() -> void:
