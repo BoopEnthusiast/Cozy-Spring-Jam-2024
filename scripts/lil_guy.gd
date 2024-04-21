@@ -26,7 +26,7 @@ var merge: AudioStream = preload("res://resources/Music/LilGuy/Merge.wav")
 func _input(_event):
 	if Input.is_action_just_pressed("click"):
 		if mouse_is_on and not Singleton.is_dragging:
-			audioStream.stream = voices[randi_range(0, len(voices))]
+			audioStream.stream = voices[randi_range(0, len(voices) - 1)]
 			audioStream.volume_db = 4.0
 			audioStream.play()
 			is_dragging = true
