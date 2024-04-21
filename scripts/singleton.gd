@@ -30,14 +30,10 @@ var score := 0
 var speed = 300.0
 var life_length = 10
 var size = 1.5
-var points_multiplier := 1.0
+var points_multiplier := 1
 var food_worth = 1
 var has_sentience := false
 var has_strength := false
-
-#Ending screen for when it is triggered
-@onready var ending_screen = $EndingScreen
-
 
 
 func slow_lil_guys() -> void:
