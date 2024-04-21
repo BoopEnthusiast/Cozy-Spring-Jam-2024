@@ -13,7 +13,7 @@ var current_recipe_length := 1
 
 
 func _on_body_entered(body):
-	if body.is_dragging and body is LilGuy:
+	if body is LilGuy and body.is_dragging:
 		body = body as LilGuy
 		if first_genes.is_empty():
 			first_genes = body.get_genes_as_string()
