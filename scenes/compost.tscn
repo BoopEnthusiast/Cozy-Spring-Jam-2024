@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ducrtaqc51jlc"]
+[gd_scene load_steps=8 format=3 uid="uid://ducrtaqc51jlc"]
 
 [ext_resource type="Script" path="res://scripts/compost.gd" id="1_fn5uo"]
 [ext_resource type="Script" path="res://scripts/feedingstation.gd" id="2_vnd8t"]
+[ext_resource type="AudioStream" uid="uid://bej0u2vuuq85" path="res://resources/Music/Compost.wav" id="3_41780"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_etpus"]
 
@@ -49,6 +50,10 @@ texture = SubResource("PlaceholderTexture2D_cbyi6")
 
 [node name="Collider" type="CollisionShape2D" parent="FeedingStation"]
 shape = SubResource("RectangleShape2D_6smqx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_41780")
+volume_db = -5.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="FeedingStation" to="FeedingStation" method="_on_body_entered"]
