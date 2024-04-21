@@ -65,12 +65,17 @@ func increase_food_worth() -> void:
 	apply_effects()
 
 
-func gain_sentience() -> void:
-	has_sentience = true
+#func gain_sentience() -> void:
+	#has_sentience = true
+	#if has_strength:
+		
+		
 
 
-func gain_strength() -> void:
-	has_strength = true
+#func gain_strength() -> void:
+	#has_strength = true
+	#if has_sentience:
+		#trigger world end
 
 
 func apply_effects() -> void:
