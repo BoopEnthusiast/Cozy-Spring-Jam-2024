@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvkq4gbpadk11"]
+[gd_scene load_steps=11 format=3 uid="uid://bvkq4gbpadk11"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_ju8m2"]
 [ext_resource type="PackedScene" uid="uid://cumdn73osuk3t" path="res://scenes/walls.tscn" id="2_ovlks"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/score_text.gd" id="7_3vixa"]
 [ext_resource type="PackedScene" uid="uid://crmdcshv7rb21" path="res://scenes/recipes_screen.tscn" id="8_hntjs"]
 [ext_resource type="PackedScene" uid="uid://cwhb1ub5dsr8j" path="res://scenes/ending_screen.tscn" id="9_oil3o"]
+[ext_resource type="AudioStream" uid="uid://5xws4pnh8f6i" path="res://resources/Music/Main-theme.wav" id="10_fyh3d"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ju8m2")
@@ -77,3 +78,11 @@ visible = false
 [node name="RecipesScreen" type="CanvasLayer" parent="."]
 
 [node name="RecipeBackground" parent="RecipesScreen" instance=ExtResource("8_hntjs")]
+offset_top = -1509.0
+offset_bottom = 1462.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_fyh3d")
+volume_db = -12.0
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
