@@ -1,7 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4k1qoljldvsu"]
+[gd_scene load_steps=8 format=3 uid="uid://b4k1qoljldvsu"]
 
+[ext_resource type="Texture2D" uid="uid://bx837ghe6851x" path="res://resources/cozy_buttons.png" id="1_nh88v"]
 [ext_resource type="Script" path="res://scripts/resume.gd" id="1_w77lj"]
 [ext_resource type="Script" path="res://scripts/back_to_main_menu.gd" id="2_brkmw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sj02b"]
+atlas = ExtResource("1_nh88v")
+region = Rect2(758.56, 557.15, 526, 176)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xo3vl"]
+texture = SubResource("AtlasTexture_sj02b")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bxoe"]
+atlas = ExtResource("1_nh88v")
+region = Rect2(762.9, 558.362, 523, 171)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_co74v"]
+texture = SubResource("AtlasTexture_5bxoe")
 
 [node name="PauseLayer" type="CanvasLayer"]
 process_mode = 3
@@ -18,34 +35,33 @@ grow_vertical = 2
 [node name="Resume" type="Button" parent="PauseMenu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.163542
-anchor_top = 0.669444
-anchor_right = 0.379167
-anchor_bottom = 0.794444
-offset_left = -8.0
-offset_top = -323.0
-offset_right = -8.0
-offset_bottom = -323.0
+anchor_left = 0.161458
+anchor_top = 0.519907
+anchor_right = 0.38099
+anchor_bottom = 0.644907
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_xo3vl")
 text = "Resume"
 script = ExtResource("1_w77lj")
+metadata/_edit_use_anchors_ = true
 
 [node name="MainMenu" type="Button" parent="PauseMenu"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 370.0
-offset_top = 23.0
-offset_right = 1298.0
-offset_bottom = 307.0
+anchors_preset = -1
+anchor_left = 0.596354
+anchor_top = 0.510648
+anchor_right = 0.838021
+anchor_bottom = 0.638889
+offset_bottom = 0.00012207
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxTexture_co74v")
 text = "Back to Main Menu"
 script = ExtResource("2_brkmw")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="PauseMenu"]
 layout_mode = 1
