@@ -2,12 +2,25 @@
 
 [node name="EndingScreen" type="CanvasLayer"]
 
-[node name="Panel" type="Panel" parent="."]
+[node name="EndScreenPanel" type="Panel" parent="."]
 offset_left = 4.0
 offset_right = 3843.0
 offset_bottom = 2160.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+[node name="GameOverTitle" type="RichTextLabel" parent="EndScreenPanel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1361.0
+offset_top = 30.0
+offset_right = 2504.0
+offset_bottom = 374.0
+theme_override_font_sizes/normal_font_size = 200
+text = "Game Over"
+
+[node name="GameOverText" type="RichTextLabel" parent="EndScreenPanel"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 362.0
+offset_right = 3574.0
+offset_bottom = 1992.0
+theme_override_font_sizes/normal_font_size = 100
+text = "You gave your LilGuys too much power! "

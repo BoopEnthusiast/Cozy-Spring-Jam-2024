@@ -71,7 +71,9 @@ theme_override_font_sizes/normal_font_size = 67
 text = "Score: "
 script = ExtResource("7_3vixa")
 
-[node name="RecipesScreen" parent="." instance=ExtResource("8_hntjs")]
-
 [node name="EndingScreen" parent="." instance=ExtResource("9_oil3o")]
 visible = false
+
+[node name="RecipesScreen" type="CanvasLayer" parent="."]
+
+[node name="RecipeBackground" parent="RecipesScreen" instance=ExtResource("8_hntjs")]

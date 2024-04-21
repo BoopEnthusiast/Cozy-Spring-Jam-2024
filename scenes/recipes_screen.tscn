@@ -1,6 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://crmdcshv7rb21"]
+[gd_scene load_steps=16 format=3 uid="uid://crmdcshv7rb21"]
 
-[ext_resource type="Script" path="res://scripts/recipes_screen.gd" id="1_7hkwy"]
 [ext_resource type="Script" path="res://scripts/book_button.gd" id="2_fpp56"]
 [ext_resource type="Texture2D" uid="uid://dtq3r2y3wova7" path="res://resources/recipe_book.png" id="2_l51jg"]
 [ext_resource type="Script" path="res://scripts/longevity_potion_recipe.gd" id="2_rh8d8"]
@@ -33,42 +32,12 @@ func _process(_delta):
 		
 "
 
-[sub_resource type="Animation" id="Animation_lm6jd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RecipeBackground:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-1788, 274)]
-}
-
-[sub_resource type="Animation" id="Animation_bo715"]
-resource_name = "close_recipes"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RecipeBackground:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-1500, -429), Vector2(-3000, -429)]
-}
-
-[sub_resource type="Animation" id="Animation_k2qna"]
+[sub_resource type="Animation" id="Animation_cxq55"]
 resource_name = "open_recipes"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("RecipeBackground:position")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,29 +47,56 @@ tracks/0/keys = {
 "values": [Vector2(-3000, -429), Vector2(-1500, -429)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_uboac"]
-_data = {
-"RESET": SubResource("Animation_lm6jd"),
-"close_recipes": SubResource("Animation_bo715"),
-"open_recipes": SubResource("Animation_k2qna")
+[sub_resource type="Animation" id="Animation_i6dvc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3000, -429)]
 }
 
-[node name="RecipesScreen" type="CanvasLayer"]
-script = ExtResource("1_7hkwy")
+[sub_resource type="Animation" id="Animation_1re22"]
+resource_name = "close_recipes"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1500, -429), Vector2(-3000, -429)]
+}
 
-[node name="RecipeBackground" type="Panel" parent="."]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2gads"]
+_data = {
+"RESET": SubResource("Animation_i6dvc"),
+"close_recipes": SubResource("Animation_1re22"),
+"open_recipes": SubResource("Animation_cxq55")
+}
+
+[node name="RecipeBackground" type="Panel"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -1788.0
-offset_top = -806.0
-offset_right = 2505.0
-offset_bottom = 2165.0
+offset_left = -3000.0
+offset_top = -429.0
+offset_right = 1293.0
+offset_bottom = 2542.0
 grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g1q31")
 
-[node name="RecipesTitle" type="RichTextLabel" parent="RecipeBackground"]
+[node name="RecipesTitle" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,7 +112,7 @@ theme_override_font_sizes/normal_font_size = 100
 text = "                         Recipes
 "
 
-[node name="PotionRecipes" type="RichTextLabel" parent="RecipeBackground"]
+[node name="PotionRecipes" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -134,7 +130,7 @@ text = "Slow Potion -                       - Makes your LilGuys slower. Unlocks
 
 Longevity Potion -                       - Lets LilGuys live longer. Unlocks at 30 points
 
-Bigger Hitbox Potion -              - Gives LilGuys a bigger hitbox. Unlocks at 50 points
+Enlargement Potion -              - Makes LilGuys bigger. Unlocks at 50 points
 
 Point Modification Potion -                              - Potions give more points. Unlocks at 90 points
 
@@ -147,7 +143,7 @@ Sentience Potion -                                                              
 Strength Potion -                                                                       - Make your LilGuys strong. Unlocks at 1000 points
 "
 
-[node name="SlowPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="SlowPotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 305.0
 offset_top = 1.0
@@ -158,7 +154,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "XYZZYZXXZ"
 script = SubResource("GDScript_hdcuv")
 
-[node name="LongevityPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="LongevityPotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 412.0
 offset_top = 203.0
@@ -169,7 +165,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "ZZZYYZYXXX"
 script = ExtResource("2_rh8d8")
 
-[node name="HitboxPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="LargePotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 513.0
 offset_top = 398.0
@@ -180,7 +176,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "XYXYX"
 script = ExtResource("3_tpu4c")
 
-[node name="PointPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="PointPotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 623.0
 offset_top = 601.0
@@ -191,7 +187,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "XYZZYXZYXXZY "
 script = ExtResource("4_qhqr5")
 
-[node name="KillAllPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="KillAllPotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 336.0
 offset_top = 804.0
@@ -202,7 +198,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "YYYYXXXXZZZZ"
 script = ExtResource("5_l5x6m")
 
-[node name="FoodPotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="FoodPotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 594.0
 offset_top = 1018.0
@@ -213,7 +209,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "ZYXYXZYX "
 script = ExtResource("6_bv6fg")
 
-[node name="SentiencePotionRecipe" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="SentiencePotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 446.0
 offset_top = 1206.0
@@ -224,7 +220,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "ZYXYZXZXYZXYYZXZXYXZXXYZX "
 script = ExtResource("7_modhv")
 
-[node name="StrengthPotionUnlocked" type="RichTextLabel" parent="RecipeBackground/PotionRecipes"]
+[node name="StrengthPotionUnlocked" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 0
 offset_left = 424.0
 offset_top = 1476.0
@@ -235,7 +231,7 @@ theme_override_font_sizes/normal_font_size = 46
 text = "XZYXZXYZYXZXZXZYXYYZXYYZXXZYY"
 script = ExtResource("8_j3dm0")
 
-[node name="BookButton" type="Button" parent="RecipeBackground"]
+[node name="BookButton" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 4
@@ -250,7 +246,7 @@ script = ExtResource("2_fpp56")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_uboac")
+"": SubResource("AnimationLibrary_2gads")
 }
 
-[connection signal="pressed" from="RecipeBackground/BookButton" to="RecipeBackground/BookButton" method="_on_pressed"]
+[connection signal="pressed" from="BookButton" to="BookButton" method="_on_pressed"]
