@@ -9,7 +9,7 @@ const OVERTHROW = preload("res://scripts/overthrowing.gd")
 
 func _ready():
 	
-	#if Singleton.gameOver:
+	if Singleton.gameOver:
 		transition()
 
 func transition():

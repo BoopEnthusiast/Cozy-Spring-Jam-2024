@@ -67,6 +67,7 @@ texture = SubResource("AtlasTexture_2ieoy")
 bg_color = Color(0, 0, 0, 1)
 
 [node name="EndingScreen" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_6blc8")
 
 [node name="TransitionScreen" type="ColorRect" parent="."]
