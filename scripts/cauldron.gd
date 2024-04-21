@@ -51,6 +51,9 @@ func update_label():
 	for recipe in Singleton.ALL_RECIPES:
 		if recipe == current_label.text:
 			Singleton.recipe_effectors[index].call()
+			first_genes = ""
+			second_genes = ""
+			update_label()
 			break
 		index += 1
 
