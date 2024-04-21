@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://crmdcshv7rb21"]
+[gd_scene load_steps=21 format=3 uid="uid://crmdcshv7rb21"]
 
 [ext_resource type="Script" path="res://scripts/book_button.gd" id="2_fpp56"]
 [ext_resource type="Texture2D" uid="uid://dtq3r2y3wova7" path="res://resources/recipe_book.png" id="2_l51jg"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="2_t07ha"]
 [ext_resource type="Theme" uid="uid://ieyvylo06sde" path="res://resources/book_theme.tres" id="3_2324y"]
 [ext_resource type="Script" path="res://scripts/hitbox_potion_recipe.gd" id="3_tpu4c"]
+[ext_resource type="FontFile" uid="uid://becbow7pkc0fe" path="res://resources/Xyz-Regular.otf" id="4_cg0uu"]
 [ext_resource type="Script" path="res://scripts/point_potion_recipe.gd" id="4_qhqr5"]
 [ext_resource type="Script" path="res://scripts/kill_all_potion_recipe.gd" id="5_l5x6m"]
 [ext_resource type="Script" path="res://scripts/food_potion_recipe.gd" id="6_bv6fg"]
@@ -130,6 +131,10 @@ anchor_left = 0.378057
 anchor_top = 0.227196
 anchor_right = 0.667598
 anchor_bottom = 0.812184
+offset_left = 20.0013
+offset_top = 0.000732422
+offset_right = 20.0012
+offset_bottom = 0.000732422
 theme = SubResource("Theme_172lr")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 46
@@ -162,6 +167,7 @@ anchor_right = 0.78037
 anchor_bottom = 0.0425777
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(1, 0.240874, 0.459452, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "XYZZYZXXZ"
 script = SubResource("GDScript_hdcuv")
@@ -176,6 +182,7 @@ anchor_right = 0.806116
 anchor_bottom = 0.13061
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(0.566324, 0.526654, 0.875147, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "ZZZYYZYXXX"
 script = ExtResource("2_rh8d8")
@@ -190,6 +197,7 @@ anchor_right = 0.623493
 anchor_bottom = 0.211163
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(0.4, 0.737255, 0.882353, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "XYXYX"
 script = ExtResource("3_tpu4c")
@@ -204,6 +212,7 @@ anchor_right = 0.556719
 anchor_bottom = 0.332567
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(0.79651, 0.688581, 0.101176, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "XYZZYXZYXXZY "
 script = ExtResource("4_qhqr5")
@@ -218,6 +227,7 @@ anchor_right = 0.981498
 anchor_bottom = 0.418297
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(0.165386, 0.490779, 0.459369, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "YYYYXXXXZZZZ"
 script = ExtResource("5_l5x6m")
@@ -232,6 +242,7 @@ anchor_right = 0.841514
 anchor_bottom = 0.510357
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(0.423529, 0.690196, 0.0352941, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "ZYXYXZYX "
 script = ExtResource("6_bv6fg")
@@ -240,12 +251,13 @@ metadata/_edit_use_anchors_ = true
 [node name="SentiencePotionRecipe" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0820585
-anchor_top = 0.633487
-anchor_right = 1.05471
-anchor_bottom = 0.673764
+anchor_left = 0.0160901
+anchor_top = 0.625432
+anchor_right = 1.00402
+anchor_bottom = 0.727273
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(0.831373, 0.345098, 0.360784, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "ZYXYZXZXYZXYYZXZXYXZXXYZX "
 script = ExtResource("7_modhv")
@@ -254,12 +266,13 @@ metadata/_edit_use_anchors_ = true
 [node name="StrengthPotionUnlocked" type="RichTextLabel" parent="PotionRecipes"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.060339
-anchor_top = 0.777331
-anchor_right = 1.04103
-anchor_bottom = 0.84465
+anchor_left = 0.0370073
+anchor_top = 0.782509
+anchor_right = 1.02896
+anchor_bottom = 0.844649
 theme = ExtResource("3_2324y")
 theme_override_colors/default_color = Color(0.0886311, 0.321989, 0.63501, 1)
+theme_override_fonts/normal_font = ExtResource("4_cg0uu")
 theme_override_font_sizes/normal_font_size = 46
 text = "XZYXZXYZYXZXZXZYXYYZXYYZXXZYY"
 script = ExtResource("8_j3dm0")
