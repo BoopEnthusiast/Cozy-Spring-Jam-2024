@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4k1qoljldvsu"]
+[gd_scene load_steps=17 format=3 uid="uid://b4k1qoljldvsu"]
 
+[ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="1_g68nq"]
 [ext_resource type="Texture2D" uid="uid://bx837ghe6851x" path="res://resources/cozy_buttons.png" id="1_nh88v"]
 [ext_resource type="Script" path="res://scripts/resume.gd" id="1_w77lj"]
 [ext_resource type="Script" path="res://scripts/back_to_main_menu.gd" id="2_brkmw"]
@@ -12,6 +13,22 @@ margin = Rect2(0, 0, 100, 100)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xo3vl"]
 texture = SubResource("AtlasTexture_sj02b")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpvuh"]
+atlas = ExtResource("1_nh88v")
+region = Rect2(767.08, 559.506, 512, 173)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8d2tv"]
+texture = SubResource("AtlasTexture_mpvuh")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdvcj"]
+atlas = ExtResource("1_nh88v")
+region = Rect2(766.38, 557.672, 511, 175)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ssusi"]
+texture = SubResource("AtlasTexture_bdvcj")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5bxoe"]
 atlas = ExtResource("1_nh88v")
 region = Rect2(762.9, 558.362, 523, 171)
@@ -19,6 +36,22 @@ margin = Rect2(0, 0, 100, 100)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_co74v"]
 texture = SubResource("AtlasTexture_5bxoe")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiot7"]
+atlas = ExtResource("1_nh88v")
+region = Rect2(758.6, 553.508, 520, 179)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p6ooo"]
+texture = SubResource("AtlasTexture_kiot7")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c3h4"]
+atlas = ExtResource("1_nh88v")
+region = Rect2(764.86, 562.19, 518, 168)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bblnb"]
+texture = SubResource("AtlasTexture_2c3h4")
 
 [node name="PauseLayer" type="CanvasLayer"]
 process_mode = 3
@@ -40,8 +73,11 @@ anchor_top = 0.519907
 anchor_right = 0.38099
 anchor_bottom = 0.644907
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_g68nq")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxTexture_xo3vl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8d2tv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ssusi")
 text = "Resume"
 script = ExtResource("1_w77lj")
 metadata/_edit_use_anchors_ = true
@@ -57,8 +93,11 @@ offset_bottom = 0.00012207
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_g68nq")
 theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxTexture_co74v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p6ooo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bblnb")
 text = "Back to Main Menu"
 script = ExtResource("2_brkmw")
 metadata/_edit_use_anchors_ = true
@@ -72,6 +111,8 @@ offset_left = -1106.0
 offset_right = 1106.0
 offset_bottom = 575.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_g68nq")
 theme_override_font_sizes/font_size = 250
 text = "You are currently paused
 "
