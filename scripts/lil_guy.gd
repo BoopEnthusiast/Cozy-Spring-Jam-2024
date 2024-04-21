@@ -33,6 +33,7 @@ func _input(_event):
 
 func _ready():
 	direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
+	update_effects()
 	merged.emit()
 	hunger_changed.emit()
 
@@ -107,3 +108,10 @@ func update_sprite():
 			sprite.play("hungry_walk")
 		FoodLevel.DEAD:
 			sprite.play("dead")
+
+
+func update_effects() -> void:
+	speed = Singleton.speed
+	scale = Singleton.size
+	food_worth = Singleton.food_worth
+	timer.wait_time = Singleton.life_length
