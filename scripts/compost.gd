@@ -1,10 +1,12 @@
 extends Area2D
 
 @onready var food_left_display = $FoodLeft
+@onready var audioStream: AudioStreamPlayer = $AudioStreamPlayer
 
 
 func _on_body_entered(body):
 	if body.is_dragging and body is LilGuy:
+		audioStream.play()
 		body.queue_free()
 		Singleton.food_Left += 1
 

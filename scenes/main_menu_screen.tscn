@@ -97,6 +97,9 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_2g01o")
 text = "Play"
 script = ExtResource("1_l8pd7")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Play"]
+stream = ExtResource("5_yho6j")
+
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -117,9 +120,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_gshls")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dre2c")
 text = "Quit"
 script = ExtResource("2_2017o")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_yho6j")
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
