@@ -13,16 +13,21 @@ var current_hunger_state: FoodLevel = FoodLevel.HEALTHY
 var genes: Array[String]
 var food_worth: int = 1
 var in_cauldron := false
+var voices: Array[AudioStream] = [preload("res://resources/Music/LilGuy/Lil_Guy_voices-001.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-002.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-003.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-004.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-005.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-006.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-007.wav"), preload("res://resources/Music/LilGuy/Lil_Guy_voices-008.wav")]
 
 @onready var timer: Timer = $Timer
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var leafTop: AnimatedSprite2D = $LeafTop
 @onready var midLeaf: AnimatedSprite2D = $MidLeaf
+@onready var audioStream: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 
 func _input(_event):
 	if Input.is_action_just_pressed("click"):
 		if mouse_is_on and not Singleton.is_dragging:
+			audioStream.stream = voices[randi_range(0, len(voices))]
+			audioStream.volume_db = 4.0
+			audioStream.play()
 			is_dragging = true
 			Singleton.is_dragging = true
 	elif Input.is_action_just_released("click") and is_dragging:
