@@ -90,8 +90,4 @@ offset_bottom = 1462.0
 stream = ExtResource("10_fyh3d")
 volume_db = -12.0
 
-[node name="Walls2" parent="." instance=ExtResource("2_ovlks")]
-position = Vector2(3889, 2896)
-rotation = 3.14159
-
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
