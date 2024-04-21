@@ -9,15 +9,15 @@ const INCREASE_HEIGHT_BY = 10.75
 @onready var leaf_top: AnimatedSprite2D = $"../LeafTop"
 
 
-func _on_lil_guy_hunger_changed(hunger_state: int):
-	match hunger_state:
-		0:
+func _on_lil_guy_hunger_changed():
+	match lil_guy.current_hunger_state:
+		lil_guy.FoodLevel.HEALTHY:
 			change_mid_leaf("default")
-		1:
+		lil_guy.FoodLevel.HUNGRY:
 			change_mid_leaf("hungry")
-		2:
+		lil_guy.FoodLevel.STARVING:
 			change_mid_leaf("starving")
-		3:
+		lil_guy.FoodLevel.DEAD:
 			change_mid_leaf("dead")
 
 

@@ -28,7 +28,7 @@ var score := 0
 
 # Which effects have been applied and how much
 var speed = 300.0
-var life_length = 30
+var life_length = 10
 var size = 1.5
 var points_multiplier := 1.0
 var food_worth = 1

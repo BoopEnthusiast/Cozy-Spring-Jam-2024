@@ -14,7 +14,6 @@ var genes: Array[String]
 var food_worth: int = 1
 var in_cauldron := false
 
-@onready var label: Label = $Label
 @onready var timer: Timer = $Timer
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var leafTop: AnimatedSprite2D = $LeafTop
@@ -36,6 +35,7 @@ func _ready():
 	update_effects()
 	merged.emit()
 	hunger_changed.emit()
+	update_sprite()
 
 
 func _physics_process(_delta):
@@ -112,6 +112,6 @@ func update_sprite():
 
 func update_effects() -> void:
 	speed = Singleton.speed
-	scale = Singleton.size
+	apply_scale(Vector2(Singleton.size, Singleton.size))
 	food_worth = Singleton.food_worth
 	timer.wait_time = Singleton.life_length
