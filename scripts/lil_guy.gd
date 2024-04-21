@@ -78,6 +78,7 @@ func _on_timer_timeout():
 	if current_hunger_state != FoodLevel.DEAD:
 		current_hunger_state += 1
 		hunger_changed.emit()
+		update_sprite()
 
 
 func _exit_tree():
