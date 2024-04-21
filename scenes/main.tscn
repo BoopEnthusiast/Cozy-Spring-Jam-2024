@@ -87,3 +87,5 @@ volume_db = -11.5
 autoplay = true
 
 [node name="Cauldron2" parent="." instance=ExtResource("4_1x7nn")]
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
