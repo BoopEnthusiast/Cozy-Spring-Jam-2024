@@ -1,6 +1,7 @@
 extends Button
 @onready var recipes_screen = $".."
-@onready var animation_player = $"../../AnimationPlayer"
+@onready var animation_player = $"../AnimationPlayer"
+
 
 var recipesInFrame = false
 
