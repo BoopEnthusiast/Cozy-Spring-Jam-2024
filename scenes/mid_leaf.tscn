@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bloobwnynp8e2"]
+[gd_scene load_steps=6 format=3 uid="uid://bloobwnynp8e2"]
 
 [ext_resource type="Texture2D" uid="uid://dp6ow6cq6v8hr" path="res://resources/LilGuy/Healthy/mid_leaf.png" id="1_nywpy"]
 [ext_resource type="Texture2D" uid="uid://b5nycrkfioym2" path="res://resources/LilGuy/Hungry/mid_leaf.png" id="2_06yi7"]
 [ext_resource type="Script" path="res://scripts/mid_leaf.gd" id="3_nvy0o"]
+[ext_resource type="FontFile" uid="uid://becbow7pkc0fe" path="res://resources/Xyz-Regular.otf" id="4_elrt1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_upwpf"]
 animations = [{
@@ -40,7 +41,8 @@ offset_right = -950.5
 offset_bottom = -945.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.165499, 0.529947, 0.261236, 1)
+theme_override_colors/font_color = Color(0.507625, 0.0757021, 0.532402, 1)
+theme_override_fonts/font = ExtResource("4_elrt1")
 theme_override_font_sizes/font_size = 172
 text = "X"
 horizontal_alignment = 1
