@@ -48,8 +48,7 @@ gene = "Z"
 visible = false
 
 [node name="Cauldron" parent="." instance=ExtResource("4_1x7nn")]
-position = Vector2(1926, 1405)
-scale = Vector2(1.135, 1.135)
+position = Vector2(356, 461)
 
 [node name="Compost" parent="." instance=ExtResource("5_0xkic")]
 position = Vector2(3296, 527)
@@ -77,7 +76,6 @@ text = "Score: "
 script = ExtResource("7_3vixa")
 
 [node name="EndingScreen" parent="." instance=ExtResource("9_oil3o")]
-visible = false
 
 [node name="RecipesScreen" type="CanvasLayer" parent="."]
 
