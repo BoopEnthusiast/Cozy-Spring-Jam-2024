@@ -89,6 +89,7 @@ func _on_timer_timeout():
 		current_hunger_state += 1
 		hunger_changed.emit()
 		update_sprite()
+		timer.start(10)
 
 
 func _exit_tree():
@@ -116,7 +117,8 @@ func update_sprite():
 		FoodLevel.HUNGRY:
 			sprite.play("hungry_walk")
 		FoodLevel.STARVING:
-			sprite.play("hungry_walk")
+			print("it worky")
+			sprite.play("starving_walk")
 		FoodLevel.DEAD:
 			sprite.play("dead")
 
