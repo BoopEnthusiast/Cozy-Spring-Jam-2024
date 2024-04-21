@@ -30,7 +30,7 @@ var gameOver := false
 # Which effects have been applied and how much
 var speed = 300.0
 var life_length = 10
-var size = 1.5
+var size = 2.5
 var points_multiplier := 1
 var food_worth = 1
 var has_sentience := false
