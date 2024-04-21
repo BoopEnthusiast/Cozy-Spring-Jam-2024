@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwhb1ub5dsr8j"]
+[gd_scene load_steps=3 format=3 uid="uid://cwhb1ub5dsr8j"]
+
+[ext_resource type="Script" path="res://scripts/end_screen_script.gd" id="1_kfrhs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2007f"]
 bg_color = Color(0, 0, 0, 1)
@@ -10,6 +12,7 @@ offset_left = 4.0
 offset_right = 3843.0
 offset_bottom = 2160.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2007f")
+script = ExtResource("1_kfrhs")
 
 [node name="GameOverText" type="Label" parent="EndScreenPanel"]
 layout_mode = 1

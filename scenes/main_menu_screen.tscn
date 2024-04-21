@@ -1,7 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://belsofbn0riec"]
+[gd_scene load_steps=19 format=3 uid="uid://belsofbn0riec"]
 
+[ext_resource type="Texture2D" uid="uid://bg4xaylew5rre" path="res://resources/cozy_start_screen.png" id="1_biymc"]
 [ext_resource type="Script" path="res://scripts/play.gd" id="1_l8pd7"]
+[ext_resource type="Texture2D" uid="uid://bx837ghe6851x" path="res://resources/cozy_buttons.png" id="2_670kk"]
 [ext_resource type="Script" path="res://scripts/quit.gd" id="2_2017o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmiw6"]
+atlas = ExtResource("1_biymc")
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rp52a"]
+texture = SubResource("AtlasTexture_rmiw6")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s406a"]
+atlas = ExtResource("2_670kk")
+region = Rect2(752, 552, 541, 184)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8kg8o"]
+texture = SubResource("AtlasTexture_s406a")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07upj"]
+atlas = ExtResource("2_670kk")
+region = Rect2(747.86, 551.614, 544, 186)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epe0s"]
+texture = SubResource("AtlasTexture_07upj")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o41gb"]
+atlas = ExtResource("2_670kk")
+region = Rect2(752.08, 557.072, 532, 176)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2g01o"]
+texture = SubResource("AtlasTexture_o41gb")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysbqm"]
+atlas = ExtResource("2_670kk")
+region = Rect2(760.9, 555.756, 528, 182)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d65jp"]
+texture = SubResource("AtlasTexture_ysbqm")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk7xn"]
+atlas = ExtResource("2_670kk")
+region = Rect2(761.46, 557.296, 518, 177.248)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gshls"]
+texture = SubResource("AtlasTexture_mk7xn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncgik"]
+atlas = ExtResource("2_670kk")
+region = Rect2(762.12, 557.58, 517, 175)
+margin = Rect2(0, 0, 100, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dre2c"]
+texture = SubResource("AtlasTexture_ncgik")
 
 [node name="MainMenuScreen" type="Control"]
 layout_mode = 3
@@ -11,22 +68,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Play" type="Button" parent="."]
+[node name="MenuArt" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -374.0
-offset_top = -140.0
-offset_right = 374.0
-offset_bottom = 140.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rp52a")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1614.0
+offset_top = 1056.0
+offset_right = -1377.0
+offset_bottom = -797.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 150
-text = "Play
-"
+theme_override_styles/normal = SubResource("StyleBoxTexture_8kg8o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_epe0s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2g01o")
+text = "Play"
 script = ExtResource("1_l8pd7")
 
 [node name="Quit" type="Button" parent="."]
@@ -36,26 +103,19 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -368.0
-offset_top = -659.0
-offset_right = 359.0
-offset_bottom = -356.0
+offset_left = -276.0
+offset_top = -635.0
+offset_right = 532.0
+offset_bottom = -313.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxTexture_d65jp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gshls")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dre2c")
 text = "Quit"
 script = ExtResource("2_2017o")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 581.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 250
-text = "Cozy Eugenics
-"
-horizontal_alignment = 1
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
