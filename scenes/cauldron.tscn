@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://nhpx4yj1ma7g"]
 
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_klcip"]
-[ext_resource type="AudioStream" uid="uid://wg82srakbh4q" path="res://resources/Music/Potion_Brewing.wav" id="2_50dr4"]
 [ext_resource type="FontFile" uid="uid://becbow7pkc0fe" path="res://resources/Xyz-Regular.otf" id="2_ynle0"]
 [ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="3_igkxb"]
+[ext_resource type="AudioStream" uid="uid://c2tmkvnffsfnr" path="res://resources/Music/Cauldron_Liquid.wav" id="4_xf6x8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0rqwb"]
 radius = 12.5016
@@ -70,8 +70,8 @@ text = "2"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_50dr4")
-volume_db = -5.0
+stream = ExtResource("4_xf6x8")
+volume_db = -9.37
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="pressed" from="Clear" to="." method="_on_button_pressed"]

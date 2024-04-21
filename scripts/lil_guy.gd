@@ -122,6 +122,8 @@ func update_sprite():
 			sprite.play("starving_walk")
 		FoodLevel.DEAD:
 			sprite.play("dead")
+	
+	sprite.update_leaf()
 
 
 func update_effects() -> void:
