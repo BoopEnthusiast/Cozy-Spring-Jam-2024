@@ -8,4 +8,5 @@ func _on_body_entered(body):
 			if Singleton.food_Left > 0:
 				Singleton.food_Left -= 1
 				lilGuy.current_hunger_state = LilGuy.FoodLevel.HEALTHY
+				lilGuy.timer.start()
 				lilGuy.hunger_changed.emit()
