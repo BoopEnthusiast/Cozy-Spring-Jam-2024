@@ -44,10 +44,12 @@ func update_label():
 		Singleton.points_multiplier = 1
 		generate_recipe()
 		return
+	
 	var index = 0
 	for recipe in Singleton.ALL_RECIPES:
 		if recipe == current_label.text:
 			Singleton.recipe_effectors[index].call()
+			break
 		index += 1
 
 

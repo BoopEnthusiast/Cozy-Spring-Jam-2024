@@ -78,8 +78,6 @@ visible = false
 [node name="RecipesScreen" type="CanvasLayer" parent="."]
 
 [node name="RecipeBackground" parent="RecipesScreen" instance=ExtResource("8_hntjs")]
-offset_top = -1509.0
-offset_bottom = 1462.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_pab80")

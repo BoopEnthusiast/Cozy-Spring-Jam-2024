@@ -1,7 +1,7 @@
 extends Node
 
 # Attribute multipliers
-const SLOW_MULTIPLIER = 0.8
+const SLOW_MULTIPLIER = 0.6
 const LENGTHEN_LIFE_MULTIPLIER = 1.5
 const HITBOX_SIZE_MULTIPLIER = 1.3
 const NEXT_POINTS_GAINED_MULTIPLIER = 1.5
@@ -16,7 +16,7 @@ const KILL_ALL_RECIPE = "YYYYXXXXZZZZ"
 const FOOD_INCREASE_RECIPE = "ZYXYXZYX"
 const SENTIENCE_RECIPE = "ZYXYZXZXYZXYYZXZXYXZXXYZX"
 const STRENGTH_RECIPE = "XZYXZXYZYXZXZXZYXYYZXYYZXXZYY"
-const ALL_RECIPES = [SLOW_RECIPE, LENGTHEN_RECIPE, HITBOX_RECIPE, POINTS_RECIPE, KILL_ALL_RECIPE, FOOD_INCREASE_RECIPE, SENTIENCE_RECIPE, STRENGTH_RECIPE]
+const ALL_RECIPES: Array[String] = [SLOW_RECIPE, LENGTHEN_RECIPE, HITBOX_RECIPE, POINTS_RECIPE, KILL_ALL_RECIPE, FOOD_INCREASE_RECIPE, SENTIENCE_RECIPE, STRENGTH_RECIPE]
 
 var recipe_effectors: Array[Callable] = [Callable(self, "slow_lil_guys"), Callable(self, "lengthen_lives"), Callable(self, "bigger_hitboxes"), Callable(self, "point_gain_increase"), Callable(self, "kill_all"), Callable(self, "increase_food_worth"), Callable(self,"gain_sentience"), Callable(self, "gain_strength")]
 

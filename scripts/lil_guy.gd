@@ -96,6 +96,7 @@ func get_genes_as_string() -> String:
 
 
 func update_sprite():
+	print("hello?")
 	# Flip the horizontals of the animation depending on the direction
 	sprite.flip_h = direction.x > 0
 	
@@ -113,6 +114,6 @@ func update_sprite():
 
 func update_effects() -> void:
 	speed = Singleton.speed
-	apply_scale(Vector2(Singleton.size, Singleton.size))
+	scale = Vector2(Singleton.size, Singleton.size)
 	food_worth = Singleton.food_worth
 	timer.wait_time = Singleton.life_length
