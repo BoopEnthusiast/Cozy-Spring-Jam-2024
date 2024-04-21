@@ -1,15 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ducrtaqc51jlc"]
+[gd_scene load_steps=5 format=3 uid="uid://ducrtaqc51jlc"]
 
 [ext_resource type="Script" path="res://scripts/compost.gd" id="1_fn5uo"]
 [ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="2_toddf"]
-[ext_resource type="Script" path="res://scripts/feedingstation.gd" id="2_vnd8t"]
 [ext_resource type="AudioStream" uid="uid://bej0u2vuuq85" path="res://resources/Music/Compost.wav" id="3_41780"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fj43"]
 size = Vector2(662, 451)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6smqx"]
-size = Vector2(260, 312.8)
 
 [node name="Compost" type="Area2D"]
 collision_layer = 2
@@ -37,17 +33,8 @@ text = "Food left: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FeedingStation" type="Area2D" parent="."]
-position = Vector2(0, 292.6)
-script = ExtResource("2_vnd8t")
-
-[node name="Collider" type="CollisionShape2D" parent="FeedingStation"]
-position = Vector2(0, 52)
-shape = SubResource("RectangleShape2D_6smqx")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_41780")
 volume_db = -5.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_entered" from="FeedingStation" to="FeedingStation" method="_on_body_entered"]

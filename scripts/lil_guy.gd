@@ -86,7 +86,7 @@ func _on_mouse_exited():
 
 func _on_timer_timeout():
 	if current_hunger_state != FoodLevel.DEAD:
-		current_hunger_state += 1
+		current_hunger_state += 1 as FoodLevel
 		hunger_changed.emit()
 		update_sprite()
 		timer.start(10)
@@ -117,7 +117,6 @@ func update_sprite():
 		FoodLevel.HUNGRY:
 			sprite.play("hungry_walk")
 		FoodLevel.STARVING:
-			print("it worky")
 			sprite.play("starving_walk")
 		FoodLevel.DEAD:
 			sprite.play("dead")
