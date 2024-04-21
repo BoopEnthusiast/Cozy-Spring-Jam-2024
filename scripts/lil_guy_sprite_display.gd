@@ -31,18 +31,18 @@ func _on_lil_guy_merged():
 		leaf_top.position.y = STARTING_POSITION - ((float(i) + 1) * INCREASE_HEIGHT_BY)
 
 
-func change_mid_leaf(animation: String) -> void:
-	play(animation)
+func change_mid_leaf(animation_name: String) -> void:
+	play(animation_name)
 	
-	if animation == "default" or "hungry":
+	if animation_name == "default" or "hungry":
 		for mid_leaf in mid_leaves:
-			mid_leaf.play(animation)
+			mid_leaf.play(animation_name)
 			mid_leaf.visible = true
 		
-		leaf_top.play(animation)
+		leaf_top.play(animation_name)
 		leaf_top.visible = true
 	
-	elif animation == "starving" or "dead":
+	elif animation_name == "starving" or "dead":
 		for mid_leaf in mid_leaves:
 			mid_leaf.visible = false
 		
