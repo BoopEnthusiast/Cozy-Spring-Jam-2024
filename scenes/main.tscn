@@ -48,7 +48,8 @@ gene = "Z"
 visible = false
 
 [node name="Cauldron" parent="." instance=ExtResource("4_1x7nn")]
-position = Vector2(356, 461)
+position = Vector2(1920, 1407)
+scale = Vector2(1.17, 1.17)
 
 [node name="Compost" parent="." instance=ExtResource("5_0xkic")]
 position = Vector2(3296, 527)
@@ -80,8 +81,6 @@ script = ExtResource("7_3vixa")
 [node name="RecipesScreen" type="CanvasLayer" parent="."]
 
 [node name="RecipeBackground" parent="RecipesScreen" instance=ExtResource("8_hntjs")]
-offset_top = -429.0
-offset_bottom = 2542.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_fyh3d")
