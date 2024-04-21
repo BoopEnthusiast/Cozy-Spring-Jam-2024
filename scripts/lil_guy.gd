@@ -31,9 +31,13 @@ func _input(_event):
 			audioStream.play()
 			is_dragging = true
 			Singleton.is_dragging = true
+			set_collision_layer_value(1, false)
+			set_collision_mask_value(1, false)
 	elif Input.is_action_just_released("click") and is_dragging:
 		Singleton.is_dragging = false
 		is_dragging = false
+		set_collision_layer_value(1, true)
+		set_collision_mask_value(1, true)
 
 
 func _ready():
