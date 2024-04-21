@@ -61,7 +61,6 @@ func _physics_process(_delta):
 	# Bounce off walls
 	if is_on_wall():
 		direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
-		update_sprite()
 	
 	# Move if not dead
 	if is_dragging:
@@ -72,6 +71,7 @@ func _physics_process(_delta):
 	else:
 		velocity = direction * speed
 	
+	update_sprite()
 	move_and_slide()
 
 
