@@ -19,6 +19,8 @@ shape = SubResource("RectangleShape2D_4fj43")
 
 [node name="Feeding" parent="." instance=ExtResource("2_fex3f")]
 position = Vector2(0, 314)
+collision_layer = 2
+collision_mask = 2
 
 [node name="FoodLeft" type="Label" parent="."]
 anchors_preset = -1
