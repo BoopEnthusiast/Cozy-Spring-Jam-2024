@@ -25,25 +25,30 @@ var main_node: Node2D
 var is_dragging := false
 var food_Left := 0
 var score := 0
-var points_multiplier := 1
+
+# Which effects have been applied and how much
+var speed = 300.0
+var life_length = 30
+var size = 1.5
+var points_multiplier := 1.0
+var food_worth = 1
 var has_sentience := false
 var has_strength := false
 
 
 func slow_lil_guys() -> void:
-	for lil_guy: LilGuy in get_tree().get_nodes_in_group("lil_guy"):
-		lil_guy.speed *= SLOW_MULTIPLIER
+	speed *= SLOW_MULTIPLIER
+	apply_effects()
 
 
 func lengthen_lives() -> void:
-	for lil_guy: LilGuy in get_tree().get_nodes_in_group("lil_guy"):
-		if is_instance_valid(lil_guy.timer):
-			lil_guy.timer.wait_time *= LENGTHEN_LIFE_MULTIPLIER
+	life_length *= LENGTHEN_LIFE_MULTIPLIER
+	apply_effects()
 
 
 func bigger_hitboxes() -> void:
-	for lil_guy: LilGuy in get_tree().get_nodes_in_group("lil_guy"):
-		lil_guy.scale *= HITBOX_SIZE_MULTIPLIER
+	size *= HITBOX_SIZE_MULTIPLIER
+	apply_effects()
 
 
 func point_gain_increase() -> void:
@@ -56,8 +61,8 @@ func kill_all() -> void:
 
 
 func increase_food_worth() -> void:
-	for lil_guy: LilGuy in get_tree().get_nodes_in_group("lil_guy"):
-		lil_guy.food_worth *= FOOD_WORTH_MULTIPLIER
+	food_worth *= FOOD_WORTH_MULTIPLIER
+	apply_effects()
 
 
 func gain_sentience() -> void:
@@ -66,3 +71,8 @@ func gain_sentience() -> void:
 
 func gain_strength() -> void:
 	has_strength = true
+
+
+func apply_effects() -> void:
+	for lil_guy: LilGuy in get_tree().get_nodes_in_group("lil_guy"):
+		lil_guy.update_effects() 

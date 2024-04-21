@@ -18,6 +18,7 @@ var in_cauldron := false
 @onready var timer: Timer = $Timer
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var leafTop: AnimatedSprite2D = $LeafTop
+@onready var midLeaf: AnimatedSprite2D = $MidLeaf
 
 
 func _input(_event):
@@ -32,6 +33,7 @@ func _input(_event):
 
 func _ready():
 	direction = Vector2(randf() - 0.5, randf() - 0.5).normalized()
+	update_effects()
 	merged.emit()
 	hunger_changed.emit()
 
@@ -102,10 +104,14 @@ func update_sprite():
 			sprite.play("healthy_walk")
 		FoodLevel.HUNGRY:
 			sprite.play("hungry_walk")
-			leafTop.play("hungry")
 		FoodLevel.STARVING:
 			sprite.play("hungry_walk")
-			leafTop.hide()
 		FoodLevel.DEAD:
 			sprite.play("dead")
-			leafTop.hide()
+
+
+func update_effects() -> void:
+	speed = Singleton.speed
+	scale = Singleton.size
+	food_worth = Singleton.food_worth
+	timer.wait_time = Singleton.life_length
