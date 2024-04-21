@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://ieyvylo06sde"]
 
-[ext_resource type="FontFile" uid="uid://becbow7pkc0fe" path="res://resources/Xyz-Regular.otf" id="1_18aof"]
+[ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="1_l01o1"]
 
 [resource]
-default_font = ExtResource("1_18aof")
+default_font = ExtResource("1_l01o1")

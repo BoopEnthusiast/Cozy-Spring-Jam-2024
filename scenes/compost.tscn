@@ -1,28 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://ducrtaqc51jlc"]
+[gd_scene load_steps=7 format=3 uid="uid://ducrtaqc51jlc"]
 
 [ext_resource type="Script" path="res://scripts/compost.gd" id="1_fn5uo"]
 [ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="2_toddf"]
 [ext_resource type="Script" path="res://scripts/feedingstation.gd" id="2_vnd8t"]
 [ext_resource type="AudioStream" uid="uid://bej0u2vuuq85" path="res://resources/Music/Compost.wav" id="3_41780"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_etpus"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fj43"]
-size = Vector2(662, 398)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cbyi6"]
+size = Vector2(662, 451)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6smqx"]
-size = Vector2(162, 208.8)
+size = Vector2(260, 312.8)
 
 [node name="Compost" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_fn5uo")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(658, 394)
-texture = SubResource("PlaceholderTexture2D_etpus")
-
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -228.5)
 shape = SubResource("RectangleShape2D_4fj43")
 
 [node name="FoodLeft" type="Label" parent="."]
@@ -46,11 +41,8 @@ vertical_alignment = 1
 position = Vector2(0, 292.6)
 script = ExtResource("2_vnd8t")
 
-[node name="Sprite" type="Sprite2D" parent="FeedingStation"]
-scale = Vector2(162, 208.8)
-texture = SubResource("PlaceholderTexture2D_cbyi6")
-
 [node name="Collider" type="CollisionShape2D" parent="FeedingStation"]
+position = Vector2(0, 52)
 shape = SubResource("RectangleShape2D_6smqx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

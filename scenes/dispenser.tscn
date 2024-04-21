@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgsjv8g5xuarf"]
+[gd_scene load_steps=5 format=3 uid="uid://dgsjv8g5xuarf"]
 
 [ext_resource type="Script" path="res://scripts/dispenser.gd" id="1_dragk"]
 [ext_resource type="FontFile" uid="uid://jks4wykxqnld" path="res://resources/Cute_Dino.otf" id="1_dxwe0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvadg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxkkm"]
+bg_color = Color(0, 0, 0, 0.411765)
 
 [node name="Dispenser" type="Button"]
 anchors_preset = 3
@@ -11,13 +16,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -3840.0
 offset_top = -2160.0
-offset_right = -3590.0
-offset_bottom = -2022.0
+offset_right = -3640.0
+offset_bottom = -1960.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_dxwe0")
 theme_override_font_sizes/font_size = 55
-text = "Dispense"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mvadg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oxkkm")
+text = "
+"
 script = ExtResource("1_dragk")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

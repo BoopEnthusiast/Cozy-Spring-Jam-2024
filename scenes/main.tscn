@@ -18,29 +18,30 @@ script = ExtResource("1_ju8m2")
 [node name="Walls" parent="." instance=ExtResource("2_ovlks")]
 
 [node name="DispenserLayer" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="X" parent="DispenserLayer" instance=ExtResource("3_it24s")]
-offset_left = -1217.0
-offset_top = -543.0
-offset_right = -919.0
-offset_bottom = -459.0
-text = "Dispense X"
+offset_left = -3476.0
+offset_top = -1912.0
+offset_right = -3276.0
+offset_bottom = -1712.0
+text = ""
 gene = "X"
 
 [node name="Y" parent="DispenserLayer" instance=ExtResource("3_it24s")]
-offset_left = -867.0
-offset_top = -543.0
-offset_right = -570.0
-offset_bottom = -459.0
-text = "Dispense Y"
+offset_left = -3110.0
+offset_top = -1904.0
+offset_right = -2910.0
+offset_bottom = -1704.0
+text = ""
 gene = "Y"
 
 [node name="Z" parent="DispenserLayer" instance=ExtResource("3_it24s")]
-offset_left = -517.0
-offset_top = -543.0
-offset_right = -221.0
-offset_bottom = -459.0
-text = "Dispense Z"
+offset_left = -2746.0
+offset_top = -1904.0
+offset_right = -2546.0
+offset_bottom = -1704.0
+text = ""
 gene = "Z"
 
 [node name="PauseMenu" parent="." instance=ExtResource("6_g71jd")]
@@ -81,6 +82,8 @@ visible = false
 [node name="RecipesScreen" type="CanvasLayer" parent="."]
 
 [node name="RecipeBackground" parent="RecipesScreen" instance=ExtResource("8_hntjs")]
+offset_top = -429.0
+offset_bottom = 2542.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_fyh3d")
